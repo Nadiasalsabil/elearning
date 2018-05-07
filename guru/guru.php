@@ -72,12 +72,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 <ul class="nav navbar-nav">
 				 	
 					
-					<li><a href="guru.php?halaman=mapel"><i class="fa fa-book" style="font-size:24px"></i>&nbsp;TEACHER</a></li>
+					<li><a href="guru.php?halaman=teacher"><i class="fa fa-book" style="font-size:24px"></i>&nbsp;GURU</a></li>
 					
 					
-					
+					<li class="dropdown">
+					  <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;NILAI<span class="caret"></span></a>
+					  <ul class="dropdown-menu" style="background-color: white;">
+						<li><a href="guru.php?halaman=inputnilai"><b>Input Nilai</b></a></li>
+						<li><a href="guru.php?halaman=editnilai"><b>Edit Nilai </b></a></li>
+						
+
+						</ul>
+					</li>
 					 
-					<li><a href="guru.php?halaman=inputnilai"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;INPUT NILAI</a></li>
+					
+					<li><a href="guru.php?halaman=tugas"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;TUGAS</a></li>
 					<li><a href="guru.php?halaman=jadwal"><i class="fa fa-mortar-board" style="font-size:24px;"></i>&nbsp;JADWAL </a></li>
 					
 					
@@ -93,9 +102,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="#"><b>8-1</b></a></li>
 						<li><a href="#"><b>8-2</b></a></li>
 						<li><a href="#"><b>8-3</b></a></li>
-						<li><a href="#"><b>8-4</b></a></li>
+						<li><a href="guru.php?halaman=diskusi84"><b>8-4</b></a></li>
 						<li><a href="#"><b>8-5</b></a></li>
-						<li><a href="#"><b>9-1</b></a></li>
+						<li><a href="guru.php?halaman=diskusi91"><b>9-1</b></a></li>
 						<li><a href="#"><b>9-2</b></a></li>
 						<li><a href="#"><b>9-3</b></a></li>
 						<li><a href="#"><b>9-4</b></a></li>
@@ -180,7 +189,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <?php
 
 
-if ($halaman=='mapel')
+if ($halaman=='teacher')
 include 'mapel.php';
 
 if ($halaman=='inputnilai')
@@ -192,6 +201,17 @@ include 'jadwal.php';
 if ($halaman=='diskusi71')
 include 'diskusi71.php';
 
+if ($halaman=='diskusi84')
+include 'diskus84.php';
+
+if ($halaman=='diskusi91')
+include 'diskus91.php';
+
+if ($halaman=='editnilai')
+include 'editnilai.php';
+
+if ($halaman=='tugas')
+include 'tugas.php';
 
 ?>
 

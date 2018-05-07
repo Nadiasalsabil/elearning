@@ -61,36 +61,81 @@
 </table>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="well well-sm">Quiz / Test</div>
-<a href ="soalindo1.php?halaman=indo1"><b>Latihan Soal Bahasa Indonesia 1</b> </a><br>
-<a href ="indo1.php"><b>Latihan Soal Bahasa Indonesia 2</b> </a><br>
-<a href ="indo1.php"><b>Latihan Soal Bahasa Indonesia 3</b> </a><br>
-<a href ="indo1.php"><b>Latihan Soal Bahasa Indonesia 4</b> </a><br>
-<a href ="indo1.php"><b>Latihan Soal Bahasa Indonesia 5</b> </a><br>
-<a href ="indo1.php"><b>Soal Akhir Bahasa Indonesia </b> </a><br><br>
+
+ <table class="table table-striped" >
+    <thead>
+      <tr>
+        <th style="background-color: #1ca0de;"><font color="white"><b><center>NO</center></b></font></th>
+        <th style="background-color:#1ca0de;"><font color="white"><b><center>Latihan</center></b></font></th>
+        <th style="background-color: #1ca0de;"><font color="white"><b><center>Kelas</center></b></font></th>
+        
+        
+        
+          <th colspan="2" style="background-color:#1ca0de;"><font color="white"><b><center>Action</center></b></font></th>
+      </tr>
+
+
+
+    </thead>
+    </tbody>
+  
+
+
+        <?php
+
+            include '../config/koneksi.php';
+
+            $query = mysqli_query($konek, "SELECT id_tq,latihan,id_kelas FROM topik_quis where id_kelas='7-1' AND mapel='Bahasa Indonesia'")or die(mysqli_error($konek));
+                    if(mysqli_num_rows($query) == 0){ 
+                      echo '<tr><td colspan="5" align="center">Tidak ada data!</td></tr>';  
+                    }
+                      else
+                    { 
+                      $no = 1;        
+                      while($data = mysqli_fetch_array($query)){  
+                        echo '<tr>';
+                        echo '<td><center>'.$no.'</center></td>';
+                        echo '<td> <center>'.$data['latihan'].' <center></td>';
+                        echo '<td> <center>'.$data['id_kelas'].'<center></td>';
+                   
+
+                        if($data['latihan'] == 'Latihan Soal Bahasa Indonesia 1'){
+                        echo '<td><a href="soalindo1.php?halaman=Latihan Soal Bahasa Indonesia 1"><center>Kerjakan</center></a></td>';
+                      }
+
+                        if($data['latihan'] == 'Latihan Soal Bahasa Indonesia 2'){
+                        echo '<td><a href="soalindo1.php?halaman=Latihan Soal Bahasa Indonesia 2"><center>Kerjakan</center></a></td>';
+                      }
+
+                       if($data['latihan'] == 'Latihan Soal Bahasa Indonesia 3'){
+                        echo '<td><a href="soalindo1.php?halaman=Latihan Soal Bahasa Indonesia 3"><center>Kerjakan</center></a></td>';
+                      }
+
+                       if($data['latihan'] == 'Latihan Soal Bahasa Indonesia 4'){
+                        echo '<td><a href="soalindo1.php?halaman=Latihan Soal Bahasa Indonesia 4"><center>Kerjakan</center></a></td>';
+                      }
+
+                      if($data['latihan'] == 'Latihan Soal Bahasa Indonesia 5'){
+                        echo '<td><a href="soalindo1.php?halaman=Latihan Soal Bahasa Indonesia 5"><center>Kerjakan</center></a></td>';
+                      }
+                       if($data['latihan'] == 'Latihan Soal Bahasa Indonesia Akhir'){
+                        echo '<td><a href="soalindo1.php?halaman=Latihan Soal Bahasa Indonesia Akhir"><center>Kerjakan</center></a></td>';
+                      }
+
+                   
+                   
+
+                   
+                        echo '</tr>';
+                        $no++;  
+                      }
+                    }
+              
+                ?>
+</table>
+
+
 
 
 </div>

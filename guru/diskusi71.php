@@ -1,6 +1,3 @@
-<?php
-    error_reporting(0);    
-?>
 <style>
 
 .comments { 
@@ -86,21 +83,10 @@ Kota Bks, Jawa Barat 17422</font></center>
      
      <?php
 
-      session_start();
-
-                if (!isset($_SESSION['username'])){
-               header("Location:./index.php");
-                   }
-
-                
-
-                if (isset($_SESSION['username']))
-                  {   
-
     include '../config/koneksi.php';
 
 
-    $tampil="SELECT login.username, diskusi.nama , diskusi.upload, diskusi.diskusi FROM diskusi,login where  diskusi.id_kelas = login.username AND login.username = '".$_SESSION['username']."'";
+    $tampil="SELECT id,nama , upload, diskusi FROM diskusi where id_kelas='7-1'";
     $hasil=mysqli_query($konek,$tampil)or die(mysqli_error($konek));
     
     
@@ -108,12 +94,15 @@ Kota Bks, Jawa Barat 17422</font></center>
  
       <ol class="commentlist">
        <li class="alt" id="comment-63"> <cite> 
-       
+        
+   
       <img alt="" src="../images/2.png" class="avatar" height="40" width="40" />
-
+  
 
 
          <?php echo $data['nama'] ?><br />
+
+
 
         <img src="<?php echo  $data['upload'] ?>">
           
@@ -121,36 +110,42 @@ Kota Bks, Jawa Barat 17422</font></center>
           <?php echo $data['diskusi'] ?>
 
 
-           </div>
+
  
-           
+
+   
+
+           </div>
+     
+            
+                       
         </li>
         </ol>  
 
 
            <?php
           }
-        }
+
            ?>
           </div>
 
    <div class="well well-sm" style="background-color:#1ca0de;"> 
 
-   <form action="../config/diskusi-walikelas.php" method="POST" enctype="multipart/form-data">
+   <form action="../config/diskusi-guru71.php" method="POST" enctype="multipart/form-data">
    <?php
-   $query = "SELECT * FROM login WHERE username = '".$_SESSION['username']."' ";
+   $query = "SELECT * FROM guru WHERE nip = '".$_SESSION['username']."' ";
 $exec = mysqli_query($konek, $query) or die(mysqli_error($konek));
 $row = mysqli_fetch_array($exec);
 
-$nis = $row['username'];
+$nip = $row['nip'];
 ?>
     <div class="form-group" >
     <label for="email"><font color="white"><b>Kelas:</b></font></label>
-    <input type="text" class="form-control" readonly id="kelas" name="kelas" value="<?php echo $row['id_kelas']; ?>" style="background-color:white;">
+    <input type="text" class="form-control" readonly id="kelas" name="kelas" value="7-1" readonly style="background-color:white;">
   </div>
   <div class="form-group" >
     <label for="email"><font color="white"><b>Nama Lengkap:</b></font></label>
-    <input type="text" class="form-control" id="namal" name="namal"  style="background-color:white;" value="<?php echo $row['username']; ?>" readonly>
+    <input type="text" class="form-control" readonly id="namal" name="namal" value="<?php echo $row['nama']; ?>" style="background-color:white;">
   </div>
  <div class="form-group">
   <label for="comment"><font color="white"><b>Diskusi:</b></font></label>
@@ -162,6 +157,43 @@ $nis = $row['username'];
 </form>
 </div>
 </div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
 </div>

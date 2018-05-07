@@ -11,7 +11,7 @@ $nilai = $_POST['ni'];
 
 
 
-$input="INSERT INTO nilaiquis(id_quis,nis,kelas,nama,mapel,nilai)values('','$nis','$kelas','$nama','$mapel','$nilai')";
+$input="INSERT INTO nilaiquis(id_quis,nis,kelas,nama,latihan,nilai)values('','$nis','$kelas','$nama','$mapel','$nilai')";
 $data=mysqli_query($konek,$input) or die(mysql_error());
 
 if($data){

@@ -49,7 +49,7 @@
         }
     }
 
- $input="INSERT INTO diskusi(id_diskusi,id_kelas,nama,upload,diskusi)values('','$kelas','$namal','$target_file','$diskusi')";
+ $input="INSERT INTO diskusi(id,id_kelas,nama,upload,diskusi)values('','$kelas','$namal','$target_file','$diskusi')";
     $updaterespon   = mysqli_query($konek, $input)or die(mysqli_error($konek));
 
     if ($updaterespon)

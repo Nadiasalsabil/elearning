@@ -2,6 +2,7 @@
 	
 include '../config/koneksi.php';
 
+$guru=$_POST['guru'];
 $kelas=$_POST['idkelas'];
 $nis=$_POST['nis'];
 $semester=$_POST['smt'];
@@ -13,7 +14,7 @@ $uts=$_POST['uts'];
 $uas=$_POST['uas'];
 $rataa=$_POST['rata2'];
 
-$input="INSERT INTO nilai(id,kelas,nis,smt,nama,mapel,absen,tugas,uts,uas,rata)values('','$kelas','$nis','$semester','$nama','$mapel','$absen','$tugas','$uts','$uas','$rataa')";
+$input="INSERT INTO nilai(id,guru,kelas,nis,smt,nama,mapel,absen,tugas,uts,uas,rata)values('','$guru','$kelas','$nis','$semester','$nama','$mapel','$absen','$tugas','$uts','$uas','$rataa')";
 $data=mysqli_query($konek,$input) or die (mysqli_error($konek));
 
 if($data){

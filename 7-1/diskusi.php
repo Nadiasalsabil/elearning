@@ -109,7 +109,9 @@ Kota Bks, Jawa Barat 17422</font></center>
           <div class=comment-text>
           <?php echo $data['diskusi'] ?>
 
-  <?php echo '<a href = "../config/delete-diskusi.php?id='. $data['id'].' " onClick="return confirm(\' Apakah ingin dihapus ? "  i class="fa fa-trash"></i></a>' ?>
+
+
+ 
 
    
 

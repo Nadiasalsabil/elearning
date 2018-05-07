@@ -36,7 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/stylesoal.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/font-awesome.css" rel="stylesheet"> 
 
 <!--web-fonts-->
@@ -80,18 +80,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 <ul class="nav navbar-nav">
 				 	
 					
-					<li class="dropdown">
-					  <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-book" style="font-size:24px"></i>&nbsp;Bahasa Indonesia<span class="caret"></span></a>
-					  <ul class="dropdown-menu" style="background-color: white;">
-						<li><a href="soalindo1.php?halaman=indo1"><b>Latihan Bahasa Indonesia 1</b></a></li>
-						<li><a href="soalindo1.php?halaman=indo2"><b>Latihan Bahasa Indonesia 2</b></a></li>
-						<li><a href="soalindo1.php?halaman=indo3"><b>Latihan Bahasa Indonesia 3</b></a></li>
-						<li><a href=""><b>Latihan Bahasa Indonesia 4</b></a></li>
-						<li><a href=""><b>Latihan Bahasa Indonesia 5</b></a></li>
-						<li><a href=""><b>Soal Akhir Bahasa Indonesia</b></a></li>
 
-					  </ul>
-					</li>
+					
 					
 					
 				
@@ -103,71 +93,122 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</nav>
 			<div class="clearfix"></div>
 		<!-- //navigation -->
+
+
+
 			</div>
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
 		<div class="banner-text"> 
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="slider-info">
-							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-						
-						</div>
-					</li>
-					<li>
-					
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Make the best choice for your education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>Preparing for successful future</h3>
-							<h4> Make the best choice for your education</h4>
-						   
-						</div>
-					</li>
+			<?php
 
-				</ul>
-				
-			</div>
-			<div class="clearfix"></div>	
-		</div>
+
+if ($halaman=='Latihan Soal Bahasa Indonesia 1')
+include 'indo1.php';
+
+if ($halaman=='Latihan Soal Bahasa Indonesia 2')
+include 'indo2.php';
+
+if ($halaman=='Latihan Soal Bahasa Indonesia 3')
+include 'indo3.php';
+
+if ($halaman=='Latihan Soal Bahasa Indonesia 4')
+include 'indo4.php';
+
+if ($halaman=='Latihan Soal Bahasa Indonesia 5')
+include 'indo5.php';
+
+if ($halaman=='Latihan Soal Bahasa Indonesia Akhir')
+include 'indoakhir.php';
+
+
+if ($halaman=='Latihan Soal Bahasa Inggris 1')
+include 'inggris1.php';
+
+
+if ($halaman=='Latihan Soal Bahasa Inggris 2')
+include 'inggris2.php';
+
+if ($halaman=='Latihan Soal Bahasa Inggris 3')
+include 'inggris3.php';
+
+if ($halaman=='Latihan Soal Bahasa Inggris 4')
+include 'inggris4.php';
+
+if ($halaman=='Latihan Soal Bahasa Inggris 5')
+include 'inggris5.php';
+
+if ($halaman=='Latihan Soal Bahasa Inggris Akhir')
+include 'inggrisakhir.php';
+
+
+if ($halaman=='Latihan Soal Matematika 1')
+include 'matematika1.php';
+
+if ($halaman=='Latihan Soal Matematika 2')
+include 'matematika2.php';
+
+if ($halaman=='Latihan Soal Matematika 3')
+include 'matematika3.php';
+
+if ($halaman=='Latihan Soal Matematika 4')
+include 'matematika4.php';
+
+if ($halaman=='Latihan Soal Matematika 5')
+include 'matematika5.php';
+
+if ($halaman=='Latihan Soal Matematika Akhir')
+include 'matematikaakhir.php';
+
+
+if ($halaman=='Latihan Soal IPA 1')
+include 'ipa1.php';
+
+if ($halaman=='Latihan Soal IPA 2')
+include 'ipa2.php';
+
+if ($halaman=='Latihan Soal IPA 3')
+include 'ipa3.php';
+
+if ($halaman=='Latihan Soal IPA 4')
+include 'ipa4.php';
+
+if ($halaman=='Latihan Soal IPA 5')
+include 'ipa5.php';
+
+if ($halaman=='Latihan Soal IPA Akhir')
+include 'ipaakhir.php';
+
+
+if ($halaman=='Latihan Soal IPS 1')
+include 'ips1.php';
+
+if ($halaman=='Latihan Soal IPS 2')
+include 'ips2.php';
+
+if ($halaman=='Latihan Soal IPS 3')
+include 'ips3.php';
+
+if ($halaman=='Latihan Soal IPS 4')
+include 'ips4.php';
+
+if ($halaman=='Latihan Soal IPS 5')
+include 'ips5.php';
+
+
+
+if ($halaman=='Latihan Soal IPS Akhir')
+include 'ipsakhir.php';
+
+?>	
 	</div>
 <!-- //banner -->
 <!--services-section-->
 <div class="services-w3layouts" id="services">
 	<div class="container">	
 
-	<?php
-
-
-if ($halaman=='indo1')
-include 'indo1.php';
-
-if ($halaman=='indo2')
-include 'indo2.php';
-
-if ($halaman=='indo3')
-include 'indo3.php';
-
-?>
+	
 
 
 

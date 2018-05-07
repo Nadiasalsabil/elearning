@@ -4,10 +4,6 @@
 
   session_start();
 
-   if (!isset($_SESSION['username'])){
-header("Location:../index.php");
-}
-
   if(isset($_GET['halaman'])) $halaman = $_GET['halaman'];
     else $halaman = "admin";
 
@@ -16,239 +12,254 @@ header("Location:../index.php");
 
 
 
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Admin | SMP Negeri 34 Bekasi</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/themify-icons.css">
-    <link rel="stylesheet" href="assets/css/flag-icon.min.css">
-    <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
-    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
-    <link rel="stylesheet" href="assets/scss/style.css">
-    <link href="assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
-
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Star Admin Free Bootstrap-4 Admin Dashboard Template</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="node_modules/simple-line-icons/css/simple-line-icons.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.png" />
 </head>
+
 <body>
-
-
-        <!-- Left Panel -->
-
-    <aside id="left-panel" class="left-panel" style="background-color:  #191970;">
-        <nav class="navbar navbar-expand-sm navbar-default" style="background-color:    #191970;">
-
-            <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation" >
-                    <i class="fa fa-bars"></i>
-                </button><br>
-                <img src="../images/2.png" width="80px" height="80px">
-                <a class="navbar-brand" href="./"><font color="white"><b>ADMIN SMP N 34 Bekasi</b></a></font>
-             
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+        <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center">
+       SMP NEGERI 34 BEKASI
+        
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item nav-profile">
+            <div class="nav-link">
+              <div class="profile-image"> <img src="images/faces/me.jpg" alt="image"/> <span class="online-status online"></span> </div>
+              <div class="profile-name">
+                <p class="name">Nadia Salsabil</p>
+                <p class="designation">Admin</p>
+                <div class="badge badge-teal mx-auto mt-3">SMP N 34 Bekasi</div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="admin.php?halaman=datauser"><img class="menu-icon" src="images/menu_icons/01.png" alt="menu icon"><span class="menu-title">Data User</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.php?halaman=datasiswa"><img class="menu-icon" src="images/menu_icons/02.png" alt="menu icon"><span class="menu-title">Data Siswa</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.php?halaman=dataguru"><img class="menu-icon" src="images/menu_icons/03.png" alt="menu icon"><span class="menu-title">Data Guru</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.php?halaman=jadwalguru"><img class="menu-icon" src="images/menu_icons/04.png" alt="menu icon"><span class="menu-title">Jadwal Guru</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.php?halaman=jadwalsiswa"><img class="menu-icon" src="images/menu_icons/05.png" alt="menu icon"><span class="menu-title">Jadwal Siswa</span></a></li>
+         
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row purchace-popup">
+            <div class="col-12">
+              <span class="d-flex alifn-items-center">
+                <p>Selamat Datang dihalaman Admin SMP Negeri 34 Bekasi</p>
+               
+               
+              </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+              <div class="card card-statistics" style="background-color: #1ca0de;">
+                <div class="card-body">
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <i class="mdi mdi-cube text-danger icon-lg"></i>
+                    </div>
+                    <div class="float-right">
+                       <p class="card-text text-right"><font color="white">Halaman ADMIN </font></p>
+                      <div class="fluid-container">
+                         <h3 class="card-title font-weight-bold text-right mb-0"><font color="white">SMP Negeri 34 Bekasi </font></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted mt-3">
+                    <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> <b><font color="white"><center><a href="admin.php?halaman=datauser"><font color="white">Data User </font> </a> , <a href="admin.php?halaman=datasiswa"><font color="white"> Siswa </font> </a> dan <a href="admin.php?halaman=dataguru"> <font color="white"> Guru </font> </a> SMP Negeri 34 Bekasi</font></b></center>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+              <div class="card card-statistics" style="background-color: orange;">
+                <div class="card-body">
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <i class="mdi mdi-receipt text-warning icon-lg"></i>
+                    </div>
+                    <div class="float-right">
+                      <p class="card-text text-right"><font color="white">Halaman ADMIN </font></p>
+                      <div class="fluid-container">
+                       <h3 class="card-title font-weight-bold text-right mb-0"><font color="white">SMP Negeri 34 Bekasi </font></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted mt-3">
+                     <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> <b><font color="white"><center><a href="admin.php?halaman=jadwalsiswa"><font color="white">Jadwal Kegiatan Belajar Siswa </font></a>SMP Negeri 34 Bekasi</font></b></center>
+                  </p>
+                </div>
+              </div>
+            </div>
+           
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+              <div class="card card-statistics" style="background-color: salmon;">
+                <div class="card-body">
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <i class="mdi mdi-account-location text-info icon-lg"></i>
+                    </div>
+                    <div class="float-right">
+                      <p class="card-text text-right"><font color="white">Halaman ADMIN </font></p>
+                      <div class="fluid-container">
+                       <h3 class="card-title font-weight-bold text-right mb-0"><font color="white">SMP Negeri 34 Bekasi </font></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted mt-3">
+                    <i class="mdi mdi-alert-octagon mr-1" aria-hidden="true"></i> <b><font color="white"><center><a href="admin.php?halaman=jadwalguru"><font color="white">Jadwal Kegiatan Belajar Mengajar Guru </font></a> SMP Negeri 34 Bekasi</font></b></center>
+                  </p>
+                </div>
+              </div>
+            </div>
+             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 grid-margin stretch-card">
+              <div class="card card-statistics" style="background-color: green;">
+                <div class="card-body">
+                  <div class="clearfix">
+                    <div class="float-left">
+                      <i class="mdi mdi-account-location text-info icon-lg"></i>
+                    </div>
+                    <div class="float-right">
+                      <p class="card-text text-right"><font color="white">Halaman ADMIN </font></p>
+                      <div class="fluid-container">
+                        <h3 class="card-title font-weight-bold text-right mb-0"><font color="white">SMP Negeri 34 Bekasi </font></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="text-muted mt-3">
+                    <i class="mdi mdi-reload mr-1" aria-hidden="true"></i><a href="../config/logout.php" > <font color="white">Logout  </font></a>
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div id="main-menu" class="main-menu collapse navbar-collapse" >
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="admin.php?halaman=dashboard"> <i class="menu-icon fa fa-dashboard"></i><font color="white"><b>Dashboard</b></font> </a>
-                    </li>
-                    <h3 class="menu-title"><b><font color="white">SMP Negeri 34 Bekasi</font></b></h3><!-- /.menu-title -->
-                    <li class="menu-item-has-children dropdown" >
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop" style="color: white;"></i><font color="white"><b>Data</b></font></a>
-                        <ul class="sub-menu children dropdown-menu" style="background-color:#191970;">
-                            <li><i class="fa fa-puzzle-piece" style="color: white;"></i><a href="admin.php?halaman=user"><font color="white"><b>User</b></font></a></li>
-                            <li><i class="fa fa-id-badge" style="color: white;"></i><a href="admin.php?halaman=siswa"><font color="white"><b>Siswa</b></font></a></li>
-                            <li><i class="fa fa-bars" style="color: white;"></i><a href="admin.php?halaman=guru"><font color="white"><b>Guru</b></font></a></li>
-                           
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table" style="color: white;"></i><font color="white"><b>Jadwal KBM</b></font></a>
-                        <ul class="sub-menu children dropdown-menu" style="background-color:#191970;">
-                            <li><i class="fa fa-table" style="color: white;"></i><a href="admin.php?halaman=jadwal-siswa"><font color="white"><b>Jadwal Siswa</b></font></a></li>
-                            <li><i class="fa fa-table" style="color: white;"></i><a href="admin.php?halaman=jadwal-guru"><font color="white"><b>Jadwal Guru</b></font></a></li>
-                            
-                        </ul>
-                    </li>
-                  
-
-                  
-                    <li><a href="#" > <i class="menu-icon fa fa-th" style="color: white;"></i><font color="white"><b>Kritik & Saran</b></font></a></li>
-                    
 
 
-                    <li><a href="../config/logout.php" > <i class="menu-icon fa fa-sign-out" style="color: white;"></i><font color="white"><b>Logout</b></font></a></li>
-                         
-                  
 
-                   
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
-    </aside><!-- /#left-panel -->
-
-    <!-- Left Panel -->
-
-    <!-- Right Panel -->
-
-    <div id="right-panel" class="right-panel">
-
-        <!-- Header-->
-
-        <header id="header" class="header">
- <div class="header-menu">
-
-                <div class="col-sm-7">
-                    <a id="menuToggle" class="menutoggle pull-left" style="background-color:black;"><i class="fa fa fa-tasks" style="color:white;"></i></a>
-                    <div class="header-left">
-                        
-                       
-                    
-                    <div class="header-left">
-                      
-                        <div class="form-inline">
-                           
-                        </div>
-
-                      
-
-                        <div class="dropdown for-message">
-                          
-                        <h4><b><font color="blue"><center>SMP NEGERI 34 BEKASI</center></font></b>
-                        <center><font size="2px">Jl. Wibawa Mukti IV No.32, Jatimekar, Jatiasih, Kota Bekasi, Jawa Barat 17422 </font></center>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-5">
-                    <div class="user-area dropdown float-right">
-                        
-                       
-
-                        <div class="user-menu dropdown-menu">
-                              
-                        </div>
-                    </div>
-
+          </div>
+          <div class="row">
+            <div class="col-12 grid-margin">
+              <div class="card">
+                <div class="card-body">
                  
 
+                  <?php
+              if ($halaman=='datauser')
+              include 'datauser.php';
+
+            if ($halaman=='datasiswa')
+              include 'datasiswa.php';
+
+              if ($halaman=='dataguru')
+              include 'dataguru.php';
+
+            if ($halaman=='jadwalguru')
+              include 'jadwalguru.php';
+
+             if ($halaman=='jadwalsiswa')
+              include 'jadwalsiswa.php';
+
+             if ($halaman=='tambahdatasiswa')
+              include 'tambahsiswa.php';
+
+             if ($halaman=='tambahdataguru')
+              include 'tambahguru.php';
+
+              if ($halaman=='tambahdatauser')
+              include 'tambahuser.php';
+
+             if ($halaman=='tambahjadwalguru')
+              include 'tambahjadwalguru.php';
+
+              if ($halaman=='tambahjadwalsiswa')
+              include 'tambahjadwalsiswa.php';
+               
+
+              if ($halaman=='edituser')
+              include 'edituser.php';
+
+
+
+
+
+
+
+                ?>
+
                 </div>
+              </div>
             </div>
-
-        </header><!-- /header -->
-        <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                       <marquee> Selamat datang di Sistem Halaman Admin SMP Negeri 34 Bekasi </marquee>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <marquee> Selamat datang di Sistem Halaman Admin SMP Negeri 34 Bekasi </marquee>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="content mt-3">
-
-            <div class="col-sm-12">
-               <?php
-                if ($halaman=='siswa')
-                include 'siswa.php';
-
-             if ($halaman=='dashboard')
-                include 'dashboard.php';
-
-             if ($halaman=='guru')
-                include 'guru.php';
-
-             if ($halaman=='user')
-                include 'user.php';
-
-             if ($halaman=='jadwal-guru')
-                include 'jadwal-guru.php';
-
-
-             if ($halaman=='jadwal-siswa')
-                include 'jadwal-siswa.php';
-                  
-               ?>    
+          </div>
+          
+         
                    
-                </div>
-            </div>
+          
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="container-fluid clearfix">
+            <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a href="http://www.bootstrapdash.com/" target="_blank">Admindashboard</a>. All rights reserved.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Nadia Salsabil <i class="mdi mdi-heart text-danger"></i></span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
 
-
-           
-            <!--/.col-->
-
-            <!--/.col-->
-
-           
-            <!--/.col-->
-
-            
-            <!--/.col-->
-
-           
-
-
-      
-    <!-- Right Panel -->
-
-    <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
-
-
-    <script src="assets/js/lib/chart-js/Chart.bundle.js"></script>
-    <script src="assets/js/dashboard.js"></script>
-    <script src="assets/js/widgets.js"></script>
-    <script src="assets/js/lib/vector-map/jquery.vmap.js"></script>
-    <script src="assets/js/lib/vector-map/jquery.vmap.min.js"></script>
-    <script src="assets/js/lib/vector-map/jquery.vmap.sampledata.js"></script>
-    <script src="assets/js/lib/vector-map/country/jquery.vmap.world.js"></script>
-    <script>
-        ( function ( $ ) {
-            "use strict";
-
-            jQuery( '#vmap' ).vectorMap( {
-                map: 'world_en',
-                backgroundColor: null,
-                color: '#ffffff',
-                hoverOpacity: 0.7,
-                selectedColor: '#1de9b6',
-                enableZoom: true,
-                showTooltip: true,
-                values: sample_data,
-                scaleColors: [ '#1de9b6', '#03a9f5' ],
-                normalizeFunction: 'polynomial'
-            } );
-        } )( jQuery );
-    </script>
-
+  <!-- plugins:js -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/misc.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5NXz9eVnyJOA81wimI8WYE08kW_JMe8g&callback=initMap" async defer></script>
+  <script src="js/maps.js"></script>
+  <!-- End custom js for this page-->
 </body>
+
 </html>

@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 	<li class="dropdown">
 					  <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-book" style="font-size:24px"></i>&nbsp;MAPEL<span class="caret"></span></a>
 					  <ul class="dropdown-menu" style="background-color: white;">
-						<li><a href="7-1.php?halaman=pkn"><b>Pendidikan Kewarganegaraan</b></a></li>
+					
 						<li><a href="7-1.php?halaman=indo"><b>Bahasa Indonesia</b></a></li>
 						<li><a href="7-1.php?halaman=inggris"><b>Bahasa Inggris</b></a></li>
 						<li><a href="7-1.php?halaman=mtk"><b>Matematika</b></a></li>
@@ -130,30 +130,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>
 					<li>
 					
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Make the best choice for your education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>Preparing for successful future</h3>
-							<h4> Make the best choice for your education</h4>
-						   
-						</div>
-					</li>
 
 				</ul>
 				

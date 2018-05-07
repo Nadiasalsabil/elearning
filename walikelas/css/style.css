@@ -180,13 +180,7 @@ section {
 }
 /*-- //header --*/
 .banner {
-    background: url(../images/bg55.jpg)no-repeat 0px 0px;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-ms-background-size: cover;
-    background-size: cover;
-    min-height: 730px;
+   
 }
 .banner-text {
     text-align: left;

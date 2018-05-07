@@ -67,7 +67,7 @@ ol.commentlist {
 </style>
 
 
-<center><font color="#1ca0de"> <h2>FORUM DISKUSI VII-I </h2></font></center>
+<center><font color="#1ca0de"> <h2>FORUM DISKUSI  </h2></font></center>
 <center><i class="fa fa-user" style="font-size:70px"></i></center>
 <center><font color="#1ca0de"> <h2>SMP Negeri 34 Bekasi </h2></font></center>
 <center><font color="black">Jl. Wibawa Mukti IV No.32, Jatimekar, Jatiasih,
@@ -119,6 +119,9 @@ Kota Bks, Jawa Barat 17422</font></center>
           
           <div class=comment-text>
           <?php echo $data['diskusi'] ?>
+
+        
+
 
 
            </div>

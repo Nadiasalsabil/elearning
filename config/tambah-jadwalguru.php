@@ -19,7 +19,7 @@ $data=mysqli_query($konek,$input) or die (mysqli_error($konek));
 
 if($data){
 	echo "<strong><center>Anda telah berhasil menambahkan Jadwal KBM Guru";
-	echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/admin.php?halaman=jadwal-guru">'; 
+	echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/admin.php?halaman=jadwalguru">'; 
 }
 
 ?>

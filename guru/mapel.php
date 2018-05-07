@@ -47,7 +47,7 @@
      <option>Matematika
       <option>IPA
       <option>IPS
-        <option>PKN
+       
       </select>
       </center>
       </div>
@@ -55,12 +55,12 @@
 
    <div class="form-group">
     <label for="email">Judul:</label>
-    <input type="text" class="form-control" id="judul" name="judul">
+    <input type="text" class="form-control" id="judul" name="judul" placeholder="Ex:Sistem Peredaran Darah">
   </div>
 
  <div class="form-group">
     <label for="email">BAB Materi / Soal:</label>
-    <input type="text" class="form-control" id="bab" name="bab">
+    <input type="text" class="form-control" id="bab" name="bab" placeholder="Ex:Bab 1">
   </div>
 
  <div class="form-group">
@@ -88,7 +88,7 @@
 
 <div class="well well-sm">Upload Quiz Online</div>
 
-<form action="#" method="POST" enctype="multipart/form-data">
+<form action="../config/upload-quisonline.php" method="POST" enctype="multipart/form-data">
    <div class="form-group">
       <label for="mapel">Kelas:</label>
      <center><select size="1" class="form-control" id="idkelas" name="idkelas" >
@@ -153,15 +153,8 @@
         <option>Latihan Soal  IPS 5
           <option>Latihan Soal IPS Akhir
 
-             <option>.................................................
-             <option>Latihan Soal PKN 1 
-     <option>Latihan Soal  PKN 2
-     <option>Latihan Soal  PKN 3
-      <option>Latihan Soal  PKN 4
-        <option>Latihan Soal  PKN 5
-          <option>Latihan Soal PKN Akhir
          <option>.................................................
-             <option>Latihan Tryout 1 
+             <option>Latihan Soal Tryout 1 
      <option>Latihan Soal  Tryout 2
      <option>Latihan Soal  Tryout 3
       <option>Latihan Soal Tryout 4
@@ -179,31 +172,30 @@
 
 <div class="form-group">
     <label for="email">Pilihan a:</label>
-    <textarea class="form-control" rows="5" id="a" name="a"></textarea style="background-color:white;">
+    <input type="text" class="form-control" id="a" name="a">
   </div>
 
   <div class="form-group">
     <label for="email">Pilihan b:</label>
-    <textarea class="form-control" rows="5" id="b" name="b"></textarea style="background-color:white;">
+    <input type="text" class="form-control" id="b" name="b">
   </div>
 
 <div class="form-group">
     <label for="email">Pilihan c:</label>
-    <textarea class="form-control" rows="5" id="c" name="c"></textarea style="background-color:white;">
-  </div>
+    <input type="text" class="form-control" id="c" name="c">
 
   <div class="form-group">
     <label for="email">Pilihan d:</label>
-    <textarea class="form-control" rows="5" id="d" name="d"></textarea style="background-color:white;">
+    <input type="text" class="form-control" id="d" name="d">
   </div>
  
 <div class="form-group">
     <label for="email">Pilihan e:</label>
-    <textarea class="form-control" rows="5" id="e" name="e"></textarea style="background-color:white;">
+    <input type="text" class="form-control" id="e" name="e">
   </div>
 <div class="form-group">
     <label for="email">Kunci Jawaban:</label>
-    <input type="text" class="form-control" id="kj" name="kj">
+    <input type="text" class="form-control" id="kj" name="kj" placeholder="Ex: a">
   </div>
 
   <div class="form-group">
@@ -229,91 +221,26 @@
 
   <button type="submit" class="btn btn-primary">Upload Soal</button>
 
+<br><br>
+</form><br>
+<div class="well well-sm">Import Soal </div><br>
+<form method="POST" action="../config/import_soal.php" enctype="multipart/form-data">
+  <table  >
 
-</form><br><br>
-<div class="well well-sm">Lihat Quiz Online yang diUpload</div><br><br>
-
-<div class="well well-sm"> Periksa Tugas</div>
-
- <form class="form-horizontal" action="" method="POST">
-       <div class="form-group">
-    <label for="email">Kelas:</label>
-    <input type="text" class="form-control" id="idkelas" name="idkelas">
-  </div>
-   <div class="form-group">
-    <label for="email">mapel:</label>
-    <input type="text" class="form-control" id="mapel" name="mapel">
-  </div>
-        <div class="form-group">
-            <label class="control-label col-sm-4"></label>
-            <div class="col-sm-7" align="right">
-                <button type="submit" class="btn btn-info" value="pencarian" name="cari">Cek Tugas</button>
-            </div>
-        </div>
-        <br><br><br>
-        <center>
-
-          <table class="table table-striped" style="background-color: #E6E6FA;">
-    <thead>
-      <tr>
-        <th style="background-color: #1ca0de;"><font color="white"><b><center>NO</center></b></font></th>
-        <th style="background-color: #1ca0de;"><font color="white"><b><center>Kelas</center></b></font></th>
-         <th style="background-color: #1ca0de;"><font color="white"><b><center>NIS</center></b></font></th>
-          <th style="background-color: #1ca0de;"><font color="white"><b><center>Nama</center></b></font></th>
-        <th style="background-color: #1ca0de;"><font color="white"><b><center>Mata Pelajaran</center></b></font></th>
-         <th style="background-color: #1ca0de;"><font color="white"><b><center>Judul</center></b></font></th>
-         <th style="background-color: #1ca0de;"><font color="white"><b><center>tugas_ke</center></b></font></th>
-          <th style="background-color: #1ca0de;"><font color="white"><b><center>tanggal</center></b></font></th>
-         <th style="background-color: #1ca0de;"><font color="white"><b><center>file</center></b></font></th>
+    <tr valign="top">
+      <td width="120">File Import</td>
+      <td width="10">:</td>
+      <td><input type="file" name="filename" style="width: 300px;" required></td>
+    </tr>
+    <tr>
+      <td colspan="3"><button type="submit" name="submit">IMPORT</button>
+      </td>
+    </tr>
+  </table>
+</form><br>
 
 
-      </tr>
-    </thead>
-    </tbody>
-            <?php
-                
-                include '../config/koneksi.php';
-                if(isset($_POST['cari'])){
-                    $kelas = $_POST['idkelas'];
-                     $mapel = $_POST['mapel'];
-                }
-
-
-                $query  = mysqli_query($konek, "SELECT id_kelas,nis,nama,mapel,judul,tugas_ke,tanggal,file FROM  tugas WHERE id_kelas = '$kelas' AND mapel = '$mapel'")or die(mysqli_error($konek));
-
-                    if(mysqli_num_rows($query) == 0){   
-                                
-                    }
-                     else
-                    { 
-                      $no = 1;        
-                      while($data = mysqli_fetch_array($query)){  
-                        echo '<tr>';
-                        echo '<td><center>'.$no.'</center></td>';
-                        echo '<td> <center>'.$data['id_kelas'].' <center></td>';
-                        echo '<td> <center>'.$data['nis'].' <center></td>';
-                        echo '<td> <center>'.$data['nama'].' <center></td>';
-                        echo '<td> <center>'.$data['mapel'].'<center></td>';
-                        echo '<td> <center>'.$data['judul'].'<center></td>';
-                        echo '<td> <center>'.$data['tugas_ke'].' <center></td>';
-                         echo '<td> <center>'.$data['tanggal'].' <center></td>';
-                          echo '<td> <center>'.$data['file'].' <center></td>';
-                        
-                        
-
-                     
-                       
-                       
-                   
-                        echo '</tr>';
-                        $no++;  
-                      }
-                    }
-
-
-    ?>
-</table>
- </form>
+ 
 
 
 

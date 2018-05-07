@@ -1,5 +1,4 @@
-<div class="services-w3layouts" id="services">
-	<div class="container">	
+
 
 	<h2><center><u>Latihan Bahasa Indonesia 3 </u></center></h2><br>
 	
@@ -15,7 +14,7 @@
 		
 
 
- $hasil = mysqli_query($konek, "SELECT * from soal WHERE aktif='Y' AND mapel='Bahasa Indonesia3' ORDER BY RAND()")or die(mysqli_error());
+ $hasil = mysqli_query($konek, "SELECT * from soal WHERE aktif='Y' AND mapel='Bahasa Indonesia3' AND kelas='7-1' ORDER BY RAND()")or die(mysqli_error());
 
 		$jumlah=mysqli_num_rows($hasil);
 		$urut=0;
@@ -87,7 +86,8 @@
         </p>
 </div>
 
+<div class="banner-text"> 
+
 
 
 </div>
-</div> 

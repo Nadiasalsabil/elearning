@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2018 at 03:59 AM
+-- Generation Time: May 07, 2018 at 06:58 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -35,6 +35,15 @@ CREATE TABLE `diskusi` (
   `upload` varchar(500) NOT NULL,
   `diskusi` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `diskusi`
+--
+
+INSERT INTO `diskusi` (`id`, `id_kelas`, `nama`, `upload`, `diskusi`) VALUES
+(5, '7-1', 'Daffa Fazlu Rahman', '../filediskusi/', '<p>Waalaikumsalam</p>'),
+(6, '7-1', 'Dewi Ulwiyati,S.Pd', '../filediskusi/', '<p>hello</p>'),
+(7, '8-4', 'Dewi Ulwiyati,S.Pd', '../filediskusi/', '<p>hello</p>');
 
 -- --------------------------------------------------------
 
@@ -180,7 +189,8 @@ INSERT INTO `jadwal_guru` (`id`, `nip`, `nama`, `mapel`, `kelas`, `Hari`, `waktu
 (21, '197104021998022001', 'Fauziah Juwati,S.Pd', 'Matematika', '8-3', 'Senin', '12:40:00.000000'),
 (23, '197008251998022003', 'Fauziah Juwanti,S.Pd', 'Matematika', '8-4', 'Kamis', '07:40:00.000000'),
 (24, '197008251998022003', 'Dewi Ulwiyati, S.Pd', 'Pendidikan Kewarganegaraan', '9-2', 'Selasa', '07:20:00.000000'),
-(25, '197008251998022003', 'Dewi Ulwiyati, S.Pd', 'Pendidikan Kewarganegaraan', '9-1', 'Selasa', '12:30:00.000000');
+(25, '197008251998022003', 'Dewi Ulwiyati, S.Pd', 'Pendidikan Kewarganegaraan', '9-1', 'Selasa', '12:30:00.000000'),
+(26, '197008251998022003', 'Dewi Ulwiyati, S.Pd', 'Pendidikan Kewarganegaraan', '9-3', 'Rabu', '11:30:00.000000');
 
 -- --------------------------------------------------------
 
@@ -290,12 +300,24 @@ INSERT INTO `kelas` (`id`, `pelajaran`, `id_kelas`, `file`, `soal`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kritiksaran`
+--
+
+CREATE TABLE `kritiksaran` (
+  `id` int(11) NOT NULL,
+  `kritik` varchar(400) NOT NULL,
+  `saran` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `login`
 --
 
 CREATE TABLE `login` (
   `id` int(50) NOT NULL,
-  `nis` int(30) NOT NULL,
+  `nis` varchar(70) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `level` varchar(100) NOT NULL,
@@ -310,10 +332,29 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`id`, `nis`, `username`, `password`, `level`, `id_kelas`, `batas_login`, `blokir`, `no`) VALUES
-(12, 201810896, '201810896', '202cb962ac59075b964b07152d234b70', 'siswa', '7-1', 0, 'N', 0),
-(18, 0, 'guru', '77e69c137812518e359196bb2f5e9bb9', 'guru', '-', 0, 'N', 0),
-(19, 0, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '0', 0, 'N', 0),
-(21, 0, '7-1', 'dcf52f84dbf511ee4a0abcfc18093ee4', 'walikelas', '7-1', 0, 'N', 0);
+(12, '201810896', '201810896', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'siswa', '7-1', 0, 'N', 0),
+(19, '0', 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', '0', 0, 'N', 0),
+(21, '0', '7-1', 'dcf52f84dbf511ee4a0abcfc18093ee4', 'walikelas', '7-1', 0, 'N', 0),
+(22, '0', '196010211982112001', '14e1b600b1fd579f47433b88e8d85291', 'guru', '', 0, 'N', 0),
+(23, '0', '8-4', 'dcf52f84dbf511ee4a0abcfc18093ee4', 'walikelas', '8-4', 0, 'N', 0),
+(25, '161707001', '161707001', '827ccb0eea8a706c4c34a16891f84e7b', 'siswa', '8-4', 0, 'N', 0),
+(28, '2015230057', '2015230057', 'f1be06aa2db198a3398ed79e3463ae73', 'siswa', '9-1', 0, 'N', 0),
+(29, '0', '196201031998021001', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '8-4', 0, 'N', 0),
+(30, '196712041997022001', '196712041997022001', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(31, '197104021998022001', '197104021998022001', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(32, '197008251998022003', '197008251998022003', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(33, '197005052008012018', '197005052008012018', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(34, '196712042008012004', '196712042008012004', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(35, '197110042008012006', '197110042008012006', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(36, '197207262008012004', '197207262008012004', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(37, '197603172008012004', '197603172008012004', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(38, '9-1', '9-1', 'dcf52f84dbf511ee4a0abcfc18093ee4', 'walikelas', '9-1', 0, 'N', 0),
+(39, '197002152008012012', '197002152008012012', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(40, '198003142008012006', '198003142008012006', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(41, '1976071420080012005', '1976071420080012005', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
+(43, '161707136', '161707136', '23f86cc2c670b465198a4da285e5e890', 'siswa', '8-4', 0, 'N', 0),
+(44, '161707006', '161707006', 'bcd724d15cde8c47650fda962968f102', 'siswa', '8-4', 0, 'N', 0),
+(45, '2015230057', '2015230057', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'siswa', '9-1', 0, 'N', 0);
 
 -- --------------------------------------------------------
 
@@ -331,14 +372,6 @@ CREATE TABLE `materi` (
   `file` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `materi`
---
-
-INSERT INTO `materi` (`id`, `id_kelas`, `mapel`, `judul`, `bab`, `tanggal`, `file`) VALUES
-(1, '7-1', 'Bahasa Indonesia', 'Proposal', '1', '2010-01-29', '../materi-soal/KATA PENGANTAR.pdf'),
-(3, '7-1', 'Bahasa Inggris', 'Ask Help', '1', '2018-04-05', '../materi-soal/BAB III.pdf');
-
 -- --------------------------------------------------------
 
 --
@@ -347,6 +380,7 @@ INSERT INTO `materi` (`id`, `id_kelas`, `mapel`, `judul`, `bab`, `tanggal`, `fil
 
 CREATE TABLE `nilai` (
   `id` int(20) NOT NULL,
+  `guru` varchar(100) NOT NULL,
   `kelas` varchar(50) NOT NULL,
   `nis` varchar(40) NOT NULL,
   `smt` int(30) NOT NULL,
@@ -356,17 +390,17 @@ CREATE TABLE `nilai` (
   `tugas` int(100) NOT NULL,
   `uts` int(100) NOT NULL,
   `uas` int(100) NOT NULL,
-  `rata` int(40) NOT NULL
+  `rata` float(40,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `nilai`
 --
 
-INSERT INTO `nilai` (`id`, `kelas`, `nis`, `smt`, `nama`, `mapel`, `absen`, `tugas`, `uts`, `uas`, `rata`) VALUES
-(6, '7-1', '201810896', 1, 'Daffa Fazlu Rahman', 'Bahasa Indonesia', 80, 85, 78, 80, 85),
-(7, '7-1', '2015230052', 1, 'Nadia Salsabil', 'Matematika', 100, 98, 89, 99, 90),
-(8, '7-1', '201810896', 1, 'Daffa Fazlu Rahman', 'Matematika', 60, 90, 60, 70, 90);
+INSERT INTO `nilai` (`id`, `guru`, `kelas`, `nis`, `smt`, `nama`, `mapel`, `absen`, `tugas`, `uts`, `uas`, `rata`) VALUES
+(40, '196010211982112001', '7-1', '201810901', 1, 'Jordan Imanuel Lontorin', 'Bahasa Inggris', 90, 89, 87, 85, 88),
+(41, '196010211982112001', '7-1', '201810896', 1, 'Daffa Fazlu Rahman', 'Bahasa Inggris', 90, 89, 78, 75, 83),
+(42, '196201031998021001', '8-4', '161707006', 1, 'Aji Dwi Prasetyo', 'Bahasa Indonesia', 90, 87, 98, 78, 88);
 
 -- --------------------------------------------------------
 
@@ -380,7 +414,6 @@ CREATE TABLE `nilaiquis` (
   `kelas` varchar(40) NOT NULL,
   `nama` varchar(60) NOT NULL,
   `latihan` varchar(100) NOT NULL,
-  `mapel` varchar(60) NOT NULL,
   `nilai` decimal(40,0) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -388,8 +421,14 @@ CREATE TABLE `nilaiquis` (
 -- Dumping data for table `nilaiquis`
 --
 
-INSERT INTO `nilaiquis` (`id_quis`, `nis`, `kelas`, `nama`, `latihan`, `mapel`, `nilai`) VALUES
-(5, '2015230052', '7-1', 'Nadia Salsabil', 'Latihan Bahasa Indonesia 1', 'Bahasa Indonesia ', '13');
+INSERT INTO `nilaiquis` (`id_quis`, `nis`, `kelas`, `nama`, `latihan`, `nilai`) VALUES
+(12, '201810896', '7-1', 'Daffa Fazlu Rahman', 'Latihan Soal Bahasa Indonesia 1', '90'),
+(13, '201810896', '7-1', 'Daffa Fazlu Rahman', 'Latihan Soal Bahasa Indonesia 2', '89'),
+(14, '201810896', '7-1', 'Daffa Fazlu Rahman', 'Latihan Soal Bahasa Indonesia 3', '78'),
+(15, '201810896', '7-1', 'Daffa Fazlu Rahman', 'Latihan Soal Bahasa Indonesia 4', '76'),
+(16, '201810896', '7-1', 'Daffa Fazlu Rahman', 'Latihan Soal Bahasa Indonesia 5', '95'),
+(17, '201810896', '7-1', 'Daffa Fazlu Rahman', 'Latihan Soal Bahasa Indonesia Akhir', '89'),
+(20, '201810896', '7-1', 'Daffa Fazlu Rahman', 'Latihan Soal Bahasa Inggris 1', '80');
 
 -- --------------------------------------------------------
 
@@ -411,7 +450,6 @@ CREATE TABLE `siswa` (
 
 INSERT INTO `siswa` (`id_siswa`, `nis`, `nama`, `id_kelas`, `jk`) VALUES
 (1, '161707001', 'Adinda Elfa Riza Ilyas', '8-4', 'P'),
-(2, '161707045', 'Adittiyah', '8-4', 'L'),
 (3, '161707136', 'Afivah Dewi Amaliyah', '8-4', 'P'),
 (4, '161707006', 'Aji Dwi Prasetyo', '8-4', 'L'),
 (5, '161707180', 'Alda Annisa Fitri', '8-4', 'P'),
@@ -478,7 +516,7 @@ INSERT INTO `siswa` (`id_siswa`, `nis`, `nama`, `id_kelas`, `jk`) VALUES
 CREATE TABLE `soal` (
   `id_soal` int(30) NOT NULL,
   `kelas` varchar(30) NOT NULL,
-  `mapel` varchar(30) NOT NULL,
+  `mapel` varchar(100) NOT NULL,
   `soal` varchar(600) NOT NULL,
   `a` varchar(300) NOT NULL,
   `b` varchar(300) NOT NULL,
@@ -496,14 +534,68 @@ CREATE TABLE `soal` (
 --
 
 INSERT INTO `soal` (`id_soal`, `kelas`, `mapel`, `soal`, `a`, `b`, `c`, `d`, `e`, `kunci_jawaban`, `gambar`, `tanggal`, `aktif`) VALUES
-(1, '7-1', 'Bahasa Indonesia', '<p>Bagaimana Melly dapat menciptakan lagu yang selalu berkesan  dan memilki karakter kuat ibu dua anak ini menjawab, \" menurut Melly , karena tidak banyak membaca ataupun belajar dari para pemikir dan maestro, karya yang dia hasikan menjadi sangat unik dan khas .\" Aku jadi nggak meniru orang lain\" , ujar ibu dua anak itu.Kalimat utama paragraf tersebut terdapat pada kalimat...</p>', 'pertama', 'kedua', 'ketiga', 'keempat', 'kelima', 'a', '', '2018-03-26', 'Y'),
-(2, '7-1', 'Bahasa Indonesia', '<p>Penyebab kecelakaan lalu lintas di jalan raya terutama kesalahan para pengemudi biasa kurang sabar. Mereka sering mengebut dan ingin mendahului. Mengantuk juga sering menjadi penyebab kecelakaan. Jarak yang ditempuh kendaraan terlalu jauh akan mengakibatkan sopir lelah dan mengantuk sehingga mudah tabrakan dengan kendaraan lain.\r\nKalimat tanggapan yang sesuai dengan isi paragraf tersebut adalah...</p>', 'Jarak terlalu jauh mengakibatkan pengemudi kurang sabar.', 'Bila sopir berhati-hati , kecelakaan tidak mungkin terjadi', 'Para pengemudi biasanya mengebut dan mendahului.', 'Tabrakan terjadi karena sering mengantuk pengemudi', 'Semua Benar', 'b', '', '2018-03-26', 'Y'),
-(3, '7-1', 'Bahasa Indonesia', 'Sebagian produk-produk industri dalam negeri khususnya dalam barang kebutuhan sehari-hari kurang laku dipasaran, masyarakat lebih menyukai produk luar negeri karena kualitasnya lebih baik.\r\nTanggapan logis terhadap pernyataan di atas yaitu.', ' Jumlah barang yang dijual dikurangi karena barang karena barang tersebut tidak laku di pasaran', 'Barang-barang kebutuhan sehari-hari perlu diproduksi karena diperlukan.', 'Kualitas barang harus ditingkatkan karena telah ditingkatkan karena konsumen lebih senang barang yang bermutu.', 'Produksi dalam negeri dijual murah karena dengan harga murah barang cepat habis.', 'Semua benar', 'c', '', '2018-03-28', 'Y'),
-(4, '7-1', 'Bahasa Indonesia', 'Pada era global, sumber daya manusia (SDM) andai merupakan kebutuham yang mendasar. Usaha untuk mendapatkan (SDM) andal dapat dilakukan melalui berbagai cara misalnya melalui penataran, pelatihan, kursus, lokakarya, seminar atau kegiatan sejenis, cara yang efektif untuk menghasilkan SDM andal yaitu melalui jalur pendidikan dengan mengikuti pendidikan tertentu. Seseorang dapat belajar berdasarkan kurikulum yang terprogaram dan hari efektif yang pasti.\r\nSimpulan tersirat dari paragraf tersebut adalah....', 'Pada era global, sumber daya manusia (SDM) andai merupakan kebutuham yang mendasar.', 'Jalur pendidikan dianggap lebih efectif untuk menghasilkan SDM andal.', 'SDM andal dapat dilakukan melalui berbagai cara antara cara pendidikan dan  pelatihan.', 'Semua Salah', 'SDM yang andal menjadi kebutuhan mendasar bagi setipa negara baik negara maju dan berkembang.', 'b', '', '2018-03-28', 'Y'),
-(5, '7-1', 'Bahasa Indonesia', '(1) Sebagai seorang sastrawan, pekerjaan Djenar Mahesa Ayu menulis novel atau cerita pendek. (2) Dari karya tersebut tentu pembaca memproleh berbagai manfaat. (3). Penyajian pesan penulis sastra halus dan sopan. (4). Hasil penulisannya jarang menimbulkan hal-hal yang berbau SARA\r\nKalimat fakta dalam paragraf  tersebut di tandai dengan no....', '1', '2', '3', '4', '5', 'a', '', '2018-03-28', 'Y'),
-(6, '7-1', 'Bahasa Indonesia', '(1) Gubernur DKI Jakarta Sulistiyo, menargetkan pertumbuhan Ekonomi  pada 2007 sebesar 6,6 %. (2) Ia optimis target itu bisa dicapai karena ada pembangunan skala besar dijakarta. (3). Kondisi ekonomi dari sisi makro saat ini membaik. (4). Inflansi 2006 mencapai 9,9 % , 2005 mencapai 16,6 % dengan pertumbuhan ekonomi 2006 sebesar 5,8 % . (5). Jadi pada  2007 pertumbuhan  ekonomi bisa mencapai target 6,6 %, Kata Sutiyoso kepada wartawan.\r\nKalimat fakta pada bacaan tersebut di tandai engan nomer.....', '1 & 2', '1 & 4', '2 & 4', '2 & 5', '1 & 5', 'b', '', '2018-03-28', 'Y'),
-(7, '7-1', 'Bahasa Indonesia', 'Tubuh biru\r\nTatapan mata biru\r\nLelaki terguling di jalan\r\n\r\nLewat gardu belanda dengan bumi\r\nBerlindung warna malam\r\nSendiri masuk kota\r\nIngin ikut ngubur ibunya\r\nTema puisi tersebut adalah ..........', 'Perlawanan', 'Keberanian', 'Kekejaman', 'Perjuangan', 'Kesedihan', 'd', '', '2018-03-28', 'Y'),
-(8, '7-1', 'Bahasa Indonesia', ' (1) Betapa gembiranya Ardi. (2) saat pulang sekolah is mendapat tawaran dari pamannya Abdulmanam, untuk bersekolah di Jakarta. (3) bagaimanpun dijakarta harus berjuang . (4). Jakarta adalah kota besar , yang selama ini ia impikan selama ini, yakni bisa melihata dan tinggal di jakarta.\r\nBukti bahwa latar waktu kutiban tersebut  pada siang hari ditunjukan pada nomor.....', '4', '3', '2', '1', '5', 'c', '', '2018-03-28', 'Y');
+(1, '7-1', 'Latihan Soal IPA 1', 'fhfghgf', 'jghjgf', 'gh', 'ghj', 'gh', 'h', 'a', '', '2018-04-24', 'Y');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `topik_quis`
+--
+
+CREATE TABLE `topik_quis` (
+  `id_tq` int(20) NOT NULL,
+  `latihan` varchar(100) NOT NULL,
+  `id_kelas` varchar(100) NOT NULL,
+  `waktu_pengerjaan` int(50) NOT NULL,
+  `mapel` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `topik_quis`
+--
+
+INSERT INTO `topik_quis` (`id_tq`, `latihan`, `id_kelas`, `waktu_pengerjaan`, `mapel`) VALUES
+(1, 'Latihan Soal Bahasa Indonesia 1', '7-1', 3600, 'Bahasa Indonesia'),
+(2, 'Latihan Soal Bahasa Indonesia 2', '7-1', 3600, 'Bahasa Indonesia'),
+(5, 'Latihan Soal Bahasa Indonesia 3', '7-1', 3600, 'Bahasa Indonesia'),
+(6, 'Latihan Soal Bahasa Indonesia 4', '7-1', 3600, 'Bahasa Indonesia'),
+(7, 'Latihan Soal Bahasa Indonesia 5', '7-1', 3600, 'Bahasa Indonesia'),
+(10, 'Latihan Soal Bahasa Indonesia Akhir', '7-1', 3600, 'Bahasa Indonesia'),
+(11, 'Latihan Soal Bahasa Inggris 1', '7-1', 3600, 'Bahasa Inggris'),
+(13, 'Latihan Soal Bahasa Inggris 2', '7-1', 3600, 'Bahasa Inggris'),
+(15, 'Latihan Soal Bahasa Inggris 3', '7-1', 3600, 'Bahasa Inggris'),
+(16, 'Latihan Soal Bahasa Inggris 4', '7-1', 3600, 'Bahasa Inggris'),
+(17, 'Latihan Soal Bahasa Inggris 5', '7-1', 3600, 'Bahasa Inggris'),
+(18, 'Latihan Soal Bahasa Inggris Akhir', '7-1', 3600, 'Bahasa Inggris'),
+(19, 'Latihan Soal Matematika 1', '7-1', 3600, 'Matematika'),
+(20, 'Latihan Soal Matematika 2', '7-1', 3600, 'Matematika'),
+(21, 'Latihan Soal Matematika 3', '7-1', 3600, 'Matematika'),
+(22, 'Latihan Soal Matematika 4', '7-1', 3600, 'Matematika'),
+(23, 'Latihan Soal Matematika 5', '7-1', 3600, 'Matematika'),
+(24, 'Latihan Soal Matematika Akhir', '7-1', 3600, 'Matematika'),
+(25, 'Latihan Soal IPA 1', '7-1', 3600, 'IPA'),
+(26, 'Latihan Soal IPA 2', '7-1', 3600, 'IPA'),
+(27, 'Latihan Soal IPA 3', '7-1', 3600, 'IPA'),
+(28, 'Latihan Soal IPA 4', '7-1', 3600, 'IPA'),
+(29, 'Latihan Soal IPA 5', '7-1', 3600, 'IPA'),
+(30, 'Latihan Soal IPA Akhir', '7-1', 3600, 'IPA'),
+(31, 'Latihan Soal IPS 1', '7-1', 3600, 'IPS'),
+(32, 'Latihan Soal IPS 2', '7-1', 3600, 'IPS'),
+(33, 'Latihan Soal IPS 3', '7-1', 3600, 'IPS'),
+(34, 'Latihan Soal IPS 4', '7-1', 3600, 'IPS'),
+(35, 'Latihan Soal IPS 5', '7-1', 3600, 'IPS'),
+(36, 'Latihan Soal IPS Akhir', '7-1', 3600, 'IPS'),
+(37, 'Latihan Soal Bahasa Indonesia 1', '9-1', 3600, 'Bahasa Indonesia'),
+(38, 'Latihan Soal Bahasa Indonesia 2', '9-1', 3600, 'Bahasa Indonesia'),
+(39, 'Latihan Soal Bahasa Indonesia 3', '9-1', 3600, 'Bahasa Indonesia'),
+(40, 'Latihan Soal Bahasa Indonesia 4', '9-1', 3600, 'Bahasa Indonesia'),
+(41, 'Latihan Soal Bahasa Indonesia 5', '9-1', 3600, 'Bahasa Indonesia'),
+(42, 'Latihan Soal Bahasa Indonesia Akhir', '9-1', 3600, 'Bahasa Indonesia'),
+(43, 'Latihan Soal Tryout 1 ', '9-1', 3600, 'Tryout'),
+(44, 'Latihan Soal Tryout 2', '9-1', 3600, 'Tryout'),
+(45, 'Latihan Soal Tryout 3', '9-1', 3600, 'Tryout'),
+(46, 'Latihan Soal Tryout 4', '9-1', 3600, 'Tryout'),
+(47, 'Latihan Soal Tryout 5', '9-1', 3600, 'Tryout');
 
 -- --------------------------------------------------------
 
@@ -528,9 +620,7 @@ CREATE TABLE `tugas` (
 --
 
 INSERT INTO `tugas` (`id`, `nis`, `nama`, `id_kelas`, `mapel`, `judul`, `tugas_ke`, `tanggal`, `file`) VALUES
-(1, '2015230080', 'Ela Nastika', '7-2', 'Bahasa Indonesia', 'dghdf', 'dfdsf', '0000-00-00', '../tugas/'),
-(2, '2015230057', 'Nadia Salsabil', '7-1', 'Bahasa Indonesia', '7-1', '2', '2018-03-16', '../tugas/- Rundown HIFASCO 2018.docx'),
-(3, '2015230057', 'Nadia Salsabil', '7-1', 'Matematika', 'tugas latihan', '2', '2018-03-10', '../tugas/0611tu2.gif');
+(1, '161707001', 'Adinda Elfa Riza Ilyas', '8-4', 'Bahasa Indonesia', 'tugas', '1', '2018-04-20', '../tugas/react-native-preview.png');
 
 --
 -- Indexes for dumped tables
@@ -564,6 +654,12 @@ ALTER TABLE `jadwal_guru`
 -- Indexes for table `kelas`
 --
 ALTER TABLE `kelas`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kritiksaran`
+--
+ALTER TABLE `kritiksaran`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -603,6 +699,12 @@ ALTER TABLE `soal`
   ADD PRIMARY KEY (`id_soal`);
 
 --
+-- Indexes for table `topik_quis`
+--
+ALTER TABLE `topik_quis`
+  ADD PRIMARY KEY (`id_tq`);
+
+--
 -- Indexes for table `tugas`
 --
 ALTER TABLE `tugas`
@@ -616,7 +718,7 @@ ALTER TABLE `tugas`
 -- AUTO_INCREMENT for table `diskusi`
 --
 ALTER TABLE `diskusi`
-  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `guru`
@@ -634,7 +736,7 @@ ALTER TABLE `jadwal`
 -- AUTO_INCREMENT for table `jadwal_guru`
 --
 ALTER TABLE `jadwal_guru`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `kelas`
@@ -643,28 +745,34 @@ ALTER TABLE `kelas`
   MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 
 --
+-- AUTO_INCREMENT for table `kritiksaran`
+--
+ALTER TABLE `kritiksaran`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `materi`
 --
 ALTER TABLE `materi`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `nilaiquis`
 --
 ALTER TABLE `nilaiquis`
-  MODIFY `id_quis` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_quis` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `siswa`
@@ -676,13 +784,19 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `soal`
 --
 ALTER TABLE `soal`
-  MODIFY `id_soal` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_soal` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `topik_quis`
+--
+ALTER TABLE `topik_quis`
+  MODIFY `id_tq` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `tugas`
 --
 ALTER TABLE `tugas`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

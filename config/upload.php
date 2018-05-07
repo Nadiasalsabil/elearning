@@ -4,6 +4,9 @@
 
     include '../config/koneksi.php';
 
+
+   $nis = $_POST["nis"];
+   $nama = $_POST["nama"];
    $kelas = $_POST["idkelas"];
    $mapel = $_POST["mapel1"];
    $judul = $_POST["judul"];
@@ -50,7 +53,7 @@
         }
     }
 
- $input="INSERT INTO tugas(id,id_kelas,mapel,judul,tugas_ke,tanggal,file)values('','$kelas','$mapel','$judul','$tgs','$tgl','$target_file')";
+ $input="INSERT INTO tugas(id,nis,nama,id_kelas,mapel,judul,tugas_ke,tanggal,file)values('','$nis','$nama','$kelas','$mapel','$judul','$tgs','$tgl','$target_file')";
     $updaterespon   = mysqli_query($konek, $input)or die(mysqli_error($konek));
 
     if ($updaterespon)

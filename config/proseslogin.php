@@ -31,6 +31,18 @@ if($jlhrecord > 0){
 		//   echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../index2.php?halaman=utama">';
 		}
 
+		if($kelas=='8-4') {
+		  echo "<strong><center> $username sebagai $level dengan kelas $kelas berhasil Login";
+		   echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../8-4/8-4.php">';
+		//   echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../index2.php?halaman=utama">';
+		}
+
+		if($kelas=='9-1') {
+		  echo "<strong><center> $username sebagai $level dengan kelas $kelas berhasil Login";
+		   echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../9-1/9-1.php">';
+		//   echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../index2.php?halaman=utama">';
+		}
+
 		if($level=='admin') {
 		  echo "<strong><center>Anda berhasil Login sebagai Admin ";
 		  echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/admin.php?halaman=dashboard">';

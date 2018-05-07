@@ -75,14 +75,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="dropdown">
 					  <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;NILAI<span class="caret"></span></a>
 					  <ul class="dropdown-menu" style="background-color: white;">
-					  	<li><a href="wali-kelas.php?halaman=nilai-rata1"><b>Total Nilai rata-rata</b></a></li>
-						<li><a href="wali-kelas.php?halaman=nilai-pokok"><b>Nilai Semester I</b></a></li>
-						<li><a href=""><b>Nilai Semester II</b></a></li>
-						<li><a href="wali-kelas.php?halaman=nilai-quis"><b>Nilai Quis Online</b></a></li>
-						<li><a href=""><b>Grafik Nilai Semester I</b></a></li>
-						<li><a href=""><b>Grafik Nilai Semester II</b></a></li>
-						<li><a href=""><b>Grafik nilai Quis Online</b></a></li>
-					</ul>
+					  	<li><a href="wali-kelas.php?halaman=nilai-pokok"><b>Bahasa Indonesia</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaimatematika"><b>Matematika</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaibhsinggris"><b>Bahasa Inggris</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiipa"><b>IPA</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiips"><b>IPS</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiprakarya"><b>Prakarya</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaipkn"><b>PKN</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaipai"><b>PAI</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaipenjaskes"><b>PENJASKES</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiplh"><b>PLH</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaibahasasunda"><b>Bahasa Sunda</b></a></li>
+					  </ul>
+				</li>
+
+				<li class="dropdown">
+					  <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;NILAI QUIS ONLINE<span class="caret"></span></a>
+					  <ul class="dropdown-menu" style="background-color: white;">
+					  	<li><a href="wali-kelas.php?halaman=nilai-quis"><b>Bahasa Indonesia</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiquismtk"><b>Matematika</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiquisinggris"><b>Bahasa Inggris</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiquisipa"><b>IPA</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiquisips"><b>IPS</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaitryout1"><b>TRY OUT I</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaitryout2"><b>TRY OUT II</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaitryout3"><b>TRY OUT III</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaitryout4"><b>TRY OUT IV</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaitryout5"><b>TRY OUT V</b></a></li>
+					  	
+					  </ul>
 				</li>
 					
 					<li><a href="wali-kelas.php?halaman=diskusi"><i class="fa fa-user" style="font-size:24px"></i>&nbsp;DISKUSI</a></li>
@@ -99,53 +120,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div><!-- /.navbar-collapse -->
 				 
 			</nav>
-			<div class="clearfix"></div>
+			
 		<!-- //navigation -->
 			</div>
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
 		<div class="banner-text"> 
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="slider-info">
-							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-						
-						</div>
-					</li>
-					<li>
-					
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Make the best choice for your education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>Preparing for successful future</h3>
-							<h4> Make the best choice for your education</h4>
-						   
-						</div>
-					</li>
-
-				</ul>
-				
-			</div>
-			<div class="clearfix"></div>	
+			
+			
 		</div>
 	</div>
 <!-- //banner -->
@@ -166,6 +149,64 @@ include 'nilai-quis.php';
 
 if ($halaman=='nilai-rata1')
 include 'nilai-rata1.php';
+
+if ($halaman=='nilaimatematika')
+include 'nilaimatematika.php';
+
+if ($halaman=='nilaibhsinggris')
+include 'nilaibhsinggris.php';
+
+if ($halaman=='nilaiipa')
+include 'nilaiipa.php';
+
+if ($halaman=='nilaiips')
+include 'nilaiips.php';
+
+if ($halaman=='nilaiprakarya')
+include 'nilaiprakarya.php';
+
+if ($halaman=='nilaipkn')
+include 'nilaipkn.php';
+
+if ($halaman=='nilaiplh')
+include 'nilaiplh.php';
+
+if ($halaman=='nilaipai')
+include 'nilaipai.php';
+
+if ($halaman=='nilaipenjaskes')
+include 'nilaipenjaskes.php';
+
+if ($halaman=='nilaibahasasunda')
+include 'nilaibahasasunda.php';
+
+
+if ($halaman=='nilaiquismtk')
+include 'nilaiquismtk.php';
+
+if ($halaman=='nilaiquisinggris')
+include 'nilaiquisinggris.php';
+
+if ($halaman=='nilaiquisipa')
+include 'nilaiquisipa.php';
+
+if ($halaman=='nilaiquisips')
+include 'nilaiquisips.php';
+
+if ($halaman=='nilaitryout1')
+include 'nilaitryout1.php';
+
+if ($halaman=='nilaitryout2')
+include 'nilaitryout2.php';
+
+if ($halaman=='nilaitryout3')
+include 'nilaitryout3.php';
+
+if ($halaman=='nilaitryout4')
+include 'nilaitryout4.php';
+
+if ($halaman=='nilaitryout5')
+include 'nilaitryout5.php';
 
 ?>	
 
