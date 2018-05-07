@@ -10,7 +10,7 @@
       </form><br>
 
         	<div class="alert alert-danger">
-  <img src="images/faces-clipart/pic-1.png">&nbsp;&nbsp;<strong>Data Siswa  </strong>&nbsp; SMP Negeri 34 Bekasi 
+  <img src="images/faces-clipart/pic-1.png">&nbsp;&nbsp;<strong>Data Siswa Siswi  </strong>&nbsp; SMP Negeri 34 Bekasi 
 </div>
 
 <a href="admin.php?halaman=tambahdatasiswa"><button type="button" class="btn btn-danger">Tambah Data Siswa</button></a><br><br>
