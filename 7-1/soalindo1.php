@@ -19,9 +19,11 @@ header("Location:../index.php");
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
- <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+<head>
+  <!-- Kita membutuhkan jquery, disini saya menggunakan langsung dari jquery.com, jquery ini bisa didownload dan ditaruh dilocal -->
+ </head>
+ 
  
   <!-- Script Timer -->
     

@@ -35,7 +35,7 @@
 
             if(isset($_POST['cari'])){
             $cari = $_POST['cari'];
-           $query = mysqli_query($konek, "SELECT id,username,password,level FROM login where username like '%".$cari."%'")or die(mysqli_error());     
+           $query = mysqli_query($konek, "SELECT id,username,password,level FROM login where username like '%".$cari."%' OR level like '%".$cari."%'")or die(mysqli_error());     
              }else{
 
             $query = mysqli_query($konek, "SELECT id,username,password,level FROM login")or die(mysqli_error());

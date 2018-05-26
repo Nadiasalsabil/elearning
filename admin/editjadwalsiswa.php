@@ -69,6 +69,7 @@
           <li class="nav-item"><a class="nav-link" href="admin.php?halaman=dataguru"><img class="menu-icon" src="images/menu_icons/03.png" alt="menu icon"><span class="menu-title">Data Guru</span></a></li>
           <li class="nav-item"><a class="nav-link" href="admin.php?halaman=jadwalguru"><img class="menu-icon" src="images/menu_icons/04.png" alt="menu icon"><span class="menu-title">Jadwal Guru</span></a></li>
           <li class="nav-item"><a class="nav-link" href="admin.php?halaman=jadwalsiswa"><img class="menu-icon" src="images/menu_icons/05.png" alt="menu icon"><span class="menu-title">Jadwal Siswa</span></a></li>
+           <li class="nav-item"><a class="nav-link" href="admin.php?halaman=jadwaltryout"><img class="menu-icon" src="images/menu_icons/04.png" alt="menu icon"><span class="menu-title">Jadwal Tryout</span></a></li>
          
         </ul>
       </nav>
@@ -271,7 +272,8 @@ $data=mysqli_fetch_array($hasil);
               if ($halaman=='tambahjadwalsiswa')
               include 'tambahjadwalsiswa.php';
                
-
+                if ($halaman=='tambahjadwaltryout')
+              include 'tambahjadwaltryout.php';
          
 
 

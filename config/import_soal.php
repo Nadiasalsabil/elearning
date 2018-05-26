@@ -18,7 +18,7 @@ if($_FILES["filename"]["size"] > 0)
 		else
 		{
 			echo "FILE berhasil diimport";
-			echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../guru/guru.php?halaman=mapel">';
+			echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../guru/guru.php?halaman=teacher">';
 		}
 	}
 

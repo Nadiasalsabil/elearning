@@ -154,11 +154,11 @@
           <option>Latihan Soal IPS Akhir
 
          <option>.................................................
-             <option>Latihan Soal Tryout 1 
-     <option>Latihan Soal  Tryout 2
-     <option>Latihan Soal  Tryout 3
-      <option>Latihan Soal Tryout 4
-        <option>Latihan Soal  Tryout 5
+             <option>Latihan Soal Tryout Bahasa Indonesia
+     <option>Latihan Soal  Tryout Bahasa Inggris
+     <option>Latihan Soal  Tryout IPA
+      <option>Latihan Soal Tryout IPS
+        <option>Latihan Soal  Tryout Matematika
           
       </select>
       </center>

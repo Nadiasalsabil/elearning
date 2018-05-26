@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 07, 2018 at 06:58 AM
+-- Generation Time: May 26, 2018 at 08:19 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -35,15 +35,6 @@ CREATE TABLE `diskusi` (
   `upload` varchar(500) NOT NULL,
   `diskusi` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `diskusi`
---
-
-INSERT INTO `diskusi` (`id`, `id_kelas`, `nama`, `upload`, `diskusi`) VALUES
-(5, '7-1', 'Daffa Fazlu Rahman', '../filediskusi/', '<p>Waalaikumsalam</p>'),
-(6, '7-1', 'Dewi Ulwiyati,S.Pd', '../filediskusi/', '<p>hello</p>'),
-(7, '8-4', 'Dewi Ulwiyati,S.Pd', '../filediskusi/', '<p>hello</p>');
 
 -- --------------------------------------------------------
 
@@ -195,119 +186,26 @@ INSERT INTO `jadwal_guru` (`id`, `nip`, `nama`, `mapel`, `kelas`, `Hari`, `waktu
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kelas`
+-- Table structure for table `jadwal_tryout`
 --
 
-CREATE TABLE `kelas` (
-  `id` int(40) NOT NULL,
-  `pelajaran` varchar(50) NOT NULL,
-  `id_kelas` varchar(30) NOT NULL,
-  `file` varchar(400) NOT NULL,
-  `soal` varchar(800) NOT NULL
+CREATE TABLE `jadwal_tryout` (
+  `id` int(30) NOT NULL,
+  `tanggal` date NOT NULL,
+  `mapel` varchar(100) NOT NULL,
+  `tryoutke` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kelas`
+-- Dumping data for table `jadwal_tryout`
 --
 
-INSERT INTO `kelas` (`id`, `pelajaran`, `id_kelas`, `file`, `soal`) VALUES
-(1, 'PKN', '7-1', '', ''),
-(2, 'PKN', '7-2', '', ''),
-(3, 'PKN', '7-3', '', ''),
-(4, 'PKN', '7-4', '', ''),
-(5, 'PKN', '7-5', '', ''),
-(6, 'B.Inggris', '7-1', '', ''),
-(7, 'B.Inggris', '7-2', '', ''),
-(8, 'B.Inggris', '7-3', '', ''),
-(9, 'B.Inggris', '7-4', '', ''),
-(10, 'B.Inggris', '7-5', '', ''),
-(11, 'IPS', '7-1', '', ''),
-(12, 'IPS', '7-2', '', ''),
-(13, 'IPS', '7-3', '', ''),
-(14, 'IPS', '7-4', '', ''),
-(15, 'IPS', '7-5', '', ''),
-(16, 'IPA', '7-1', '', ''),
-(17, 'IPA', '7-2', '', ''),
-(18, 'IPA', '7-3', '', ''),
-(19, 'IPA', '7-4', '', ''),
-(20, 'IPA', '7-5', '', ''),
-(21, 'B.Indonesia', '7-1', '', ''),
-(22, 'B.Indonesia', '7-2', '', ''),
-(23, 'B.Indonesia', '7-3', '', ''),
-(24, 'B.Indonesia', '7-4', '', ''),
-(25, 'B.Indonesia', '7-5', '', ''),
-(32, 'Matematika', '7-1', '', ''),
-(33, 'Matematika', '7-2', '', ''),
-(34, 'Matematika', '7-3', '', ''),
-(35, 'Matematika', '7-4', '', ''),
-(36, 'Matematika', '7-5', '', ''),
-(37, 'PKN', '8-1', '', ''),
-(38, 'PKN', '8-2', '', ''),
-(39, 'PKN', '8-3', '', ''),
-(40, 'PKN', '8-4', '', ''),
-(41, 'PKN', '8-5', '', ''),
-(42, 'B.Inggris', '8-1', '', ''),
-(43, 'B.Inggris', '8-2', '', ''),
-(44, 'B.Inggris', '8-3', '', ''),
-(45, 'B.Inggris', '8-4', '', ''),
-(46, 'B.Inggris', '8-5', '', ''),
-(47, 'IPS', '8-1', '', ''),
-(48, 'IPS', '8-2', '', ''),
-(49, 'IPS', '8-3', '', ''),
-(50, 'IPS', '8-4', '', ''),
-(51, 'IPS', '8-5', '', ''),
-(52, 'IPA', '8-1', '', ''),
-(53, 'IPA', '8-2', '', ''),
-(54, 'IPA', '8-3', '', ''),
-(55, 'IPA', '8-4', '', ''),
-(56, 'IPA', '8-5', '', ''),
-(57, 'B.Indonesia', '8-1', '', ''),
-(58, 'B.Indonesia', '8-2', '', ''),
-(59, 'B.Indonesia', '8-3', '', ''),
-(60, 'B.Indonesia', '8-4', '', ''),
-(61, 'B.Indonesia', '8-5', '', ''),
-(62, 'Matematika', '8-1', '', ''),
-(63, 'Matematika', '8-2', '', ''),
-(64, 'Matematika', '8-3', '', ''),
-(65, 'Matematika', '8-4', '', ''),
-(66, 'Matematika', '8-5', '', ''),
-(67, 'PKN', '9-1', '', ''),
-(68, 'PKN', '9-2', '', ''),
-(69, 'PKN', '9-3', '', ''),
-(70, 'PKN', '9-4', '', ''),
-(71, 'PKN', '9-5', '', ''),
-(72, 'B.Inggris', '9-1', '', ''),
-(73, 'B.Inggris', '9-2', '', ''),
-(74, 'B.Inggris', '9-3', '', ''),
-(75, 'B.Inggris', '9-4', '', ''),
-(76, 'B.Inggris', '9-5', '', ''),
-(77, 'IPS', '9-1', '', ''),
-(78, 'IPS', '9-2', '', ''),
-(79, 'IPS', '9-3', '', ''),
-(80, 'IPS', '9-4', '', ''),
-(81, 'IPS', '9-5', '', ''),
-(82, 'IPA', '9-1', '', ''),
-(83, 'IPA', '9-2', '', ''),
-(84, 'IPA', '9-3', '', ''),
-(85, 'IPA', '9-4', '', ''),
-(86, 'IPA', '9-5', '', ''),
-(87, 'B.Indonesia', '9-1', '', ''),
-(88, 'B.Indonesia', '9-2', '', ''),
-(89, 'B.Indonesia', '9-3', '', ''),
-(90, 'B.Indonesia', '9-4', '', ''),
-(91, 'B.Indonesia', '9-5', '', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `kritiksaran`
---
-
-CREATE TABLE `kritiksaran` (
-  `id` int(11) NOT NULL,
-  `kritik` varchar(400) NOT NULL,
-  `saran` varchar(400) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+INSERT INTO `jadwal_tryout` (`id`, `tanggal`, `mapel`, `tryoutke`) VALUES
+(1, '2018-03-11', 'Bahasa Indonesia', '1'),
+(2, '2018-05-14', 'Bahasa Inggris', '1'),
+(3, '2018-05-15', 'Ilmu Pengetahuan Alam', '1'),
+(4, '2018-05-16', 'Ilmu Pengetahuan Sosial', '1'),
+(7, '2018-05-18', 'Matematika', '1');
 
 -- --------------------------------------------------------
 
@@ -347,14 +245,15 @@ INSERT INTO `login` (`id`, `nis`, `username`, `password`, `level`, `id_kelas`, `
 (34, '196712042008012004', '196712042008012004', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
 (35, '197110042008012006', '197110042008012006', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
 (36, '197207262008012004', '197207262008012004', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
-(37, '197603172008012004', '197603172008012004', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
 (38, '9-1', '9-1', 'dcf52f84dbf511ee4a0abcfc18093ee4', 'walikelas', '9-1', 0, 'N', 0),
 (39, '197002152008012012', '197002152008012012', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
 (40, '198003142008012006', '198003142008012006', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
 (41, '1976071420080012005', '1976071420080012005', 'd86f50107b72386a44b00f0d86007ab2', 'guru', '-', 0, 'N', 0),
 (43, '161707136', '161707136', '23f86cc2c670b465198a4da285e5e890', 'siswa', '8-4', 0, 'N', 0),
 (44, '161707006', '161707006', 'bcd724d15cde8c47650fda962968f102', 'siswa', '8-4', 0, 'N', 0),
-(45, '2015230057', '2015230057', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'siswa', '9-1', 0, 'N', 0);
+(45, '2015230057', '2015230057', 'e86fdc2283aff4717103f2d44d0610f7', 'siswa', '9-1', 0, 'N', 0),
+(46, '123456', '123456', 'bcbe3365e6ac95ea2c0343a2395834dd', 'siswa', '9-1', 0, 'N', 0),
+(47, '786876', 'hgj', '7587c3c51ac3b38e48ad47cf158d812e', '', '', 0, 'N', 0);
 
 -- --------------------------------------------------------
 
@@ -400,7 +299,8 @@ CREATE TABLE `nilai` (
 INSERT INTO `nilai` (`id`, `guru`, `kelas`, `nis`, `smt`, `nama`, `mapel`, `absen`, `tugas`, `uts`, `uas`, `rata`) VALUES
 (40, '196010211982112001', '7-1', '201810901', 1, 'Jordan Imanuel Lontorin', 'Bahasa Inggris', 90, 89, 87, 85, 88),
 (41, '196010211982112001', '7-1', '201810896', 1, 'Daffa Fazlu Rahman', 'Bahasa Inggris', 90, 89, 78, 75, 83),
-(42, '196201031998021001', '8-4', '161707006', 1, 'Aji Dwi Prasetyo', 'Bahasa Indonesia', 90, 87, 98, 78, 88);
+(42, '196201031998021001', '8-4', '161707006', 1, 'Aji Dwi Prasetyo', 'Bahasa Indonesia', 90, 87, 98, 78, 88),
+(43, '198003142008012006', '7-1', '201810896', 1, 'Daffa Fazlu Rahman', 'Bahasa Indonesia', 90, 80, 80, 90, 85);
 
 -- --------------------------------------------------------
 
@@ -534,7 +434,26 @@ CREATE TABLE `soal` (
 --
 
 INSERT INTO `soal` (`id_soal`, `kelas`, `mapel`, `soal`, `a`, `b`, `c`, `d`, `e`, `kunci_jawaban`, `gambar`, `tanggal`, `aktif`) VALUES
-(1, '7-1', 'Latihan Soal IPA 1', 'fhfghgf', 'jghjgf', 'gh', 'ghj', 'gh', 'h', 'a', '', '2018-04-24', 'Y');
+(1, '7-1', 'Latihan Soal Bahasa Indonesia 1', '<p>Penduduk yang tinggal dihunian liar atau tak berizin yang tersebar diseluruh wilayah kota solo diminta untuk pulang kekampung asalnya. Sampai sekarang sudah tercatat sebanyak 3.605 keluarga yang tinggal dipemukiman liar yang sebagian besar para pendatang. Menurut wakil wali kota solo Hadi Ruyanto,Pemkot Solo tidak akan memberi ganti rugi atau komponsasi dalam bentuk apapun kepada penghuni liar karena pada dasarnya mereka telah melakukan pelanggaran dengan tinggal diatas tanah negara. Pernyataan berikut yang bukan merupakan haal-hal pokok kutipan teks berita diatas adalah .......</p>', 'Para Pendukung penghuni liar sebagian besar pendatang', 'Semua Salah', 'Pemkot Solo tidak akan memberi kompensasi apapun terhadap para penghuni liar', 'Secara keseluruhan para penghuni liar yang tersebar dikota Solo kurang lebih 2.605 Kepala keluarga', 'Penduduk liar telah melakukan pelanggaran dengan tinggal diatas tanah negara', 'c', '', '2018-05-13', 'Y'),
+(3, '7-1', 'Latihan Soal Bahasa Indonesia 1', '<p>Simpulan kutipan teks berita tersebut yang paling tepat................</p>', 'Pemerintah kota Solo menghimbau kepada para penghuni liar yang berada di seluruh wilayah kota Solo segera pulang ke daerah asalnya', 'Penduduk liar di seluruh wilayah kota Solo pada umumnya pendatang ', 'Kompensasi dalam bentuk apapun tidak akan diberikan oleh Pemkot Solo kepada para penghuni liar karena merupakan pelanggaran', 'Penduduk liar di seluruh wilayah kota Solo pada umumnya pendatang ', 'Para penghuni liar dimohon segera pulang ke asalnya masing-masing. ', 'b', '', '2018-05-13', 'Y'),
+(4, '7-1', 'Latihan Soal Bahasa Indonesia 1', '<p>Cuaca ekstrim sejak awal November menjadi momok bagi petani di Banyumas, Jawa Tengah dan sekitarnya. Tidak hanya genangan air, serangan hama sejak tahap pembenihan sampai masa panen juga merepotkan petani. Yang banyak menyerang adalah tikus, wereng batang coklat, keong emas, bulai daun dan virus kuning.\r\nTema berita di atas adalah </p>\r\n', 'Pertanian', 'Peternakan', 'Pertambangan', 'Perdagangan', 'salah semua', 'a', '', '2018-05-13', 'Y'),
+(5, '7-1', 'Latihan Soal Bahasa Indonesia 1', '<p>Musibah itu terjadi ketika orang tengah bersiap-siap makan sahur. Dalam waktu tak lebih dari sejam, banyak rumah telah menjadi korban. Warga tak punya kesempatan yang cukup untuk menyelamatkan harta bendanya. Tangispun terdengar menyayat hati. Kini yang tampak adalah beberapa rumah yang telah hangus.\r\nIsi berita di atas adalah </p>\r\n', 'kecelakaan lalu lintas saat akan sahur ', 'gempa bumi satu jam menjelang sahur	', 'banjir terjadi tengah malam ', 'Tsunami satu jam menjelang sahur	', 'kebakaran yang terjadi menjelang subuh', 'e', '', '2018-05-13', 'Y'),
+(6, '7-1', 'Latihan Soal Bahasa Indonesia 1', '<p>Menjelang akhir tahun dan menyambut tahun baru, Kapolres Indramayu meminta pengguna kendaraan jalur pantura yang hendak konvoi untuk mematuhi tertib lalu lintas. Pengguna kendaraan diminta mencari jalan alternatif. Hal itu untuk menghindari kemacetan di jalur Pantura.Pokok-pokok yang terdapat dalam berita di atas adalah</p>', 'tahun baru, kapolres, kendaraan, jalur kemacetan', 'tahun baru, kapolres, pantura,  alternatif kemacetan', 'tahun baru, jalur pantura, jalan alternatif, kemacetan', 'tahun baru, jalur pantura, mencari jalan, kemacetan', 'tahun baru, jalur pantura, jalan alternatif, kemacetan', 'b', '', '2018-05-13', 'Y'),
+(7, '7-1', 'Latihan Soal Bahasa Indonesia 2', '<p>Kebakaran hutan yang mengakibatkan kabut asap menjadi berita hangat yang menghiasi media cetak dan elektronika. Peristiwa ini telah menjadi agenda tahunan dan menghanguskan lebih dari tiga juta hektar hutan. Peristiwa ini pun telah menggangu kehidupan satwa.</p>', '  kabut asap  ', 'agenda tahunan', ' kehidupan satwa   ', 'kebakaran hutan', 'Tsunami', 'd', '', '2018-05-16', ''),
+(8, '7-1', 'Latihan Soal Bahasa Indonesia 2', '<p>(1)      Sebelum berkendara, ada beberapa kelengkapan yang harus dicek, seperti rem, lampu, ban, dan spion yang harus berfungsi dengan baik. (2) itu gunanya servis kendaraan ke bengkel secara berkala. (3) saat berkendara, kita harus menaati semua aturan lalu lintas, dan sabar antre jika macet. (4) semua adalah hal yang harus diperhatikan pengendara agar selama sampaitujuan. Kalimat utama kutipan berita di atas terdapat pada nomor</p>', '1', '2', '3', '4', '1,2,3', 'b', '', '2018-05-16', 'Y'),
+(9, '7-1', 'Latihan Soal Bahasa Indonesia 2', '<p>Pada umumnya, sakit tenggorokkan disebabkan oleh virus. Biasanya, terkait dengan tanda-tanda penyakit saluran napas lainnya. Seperti, hidung tersumbat atau batuk. Kebanyakan sakit tenggorokkan dapat sembuh dengan sendirinya. Namun, untuk membantu agar lebih nyaman ketika sakit, dapat dilakukan dengan minum air hangat yang diberi air perasan jeruk lemon dan madu.Simpulan paragraf tersebut yang tepat adalah </p>', 'Penyakit tenggorokkan disebabkan kebanyakan oleh virus.', 'Tanda-tanda penyakit tenggorokkan adalah hidung tersumbat.', 'Sakit tenggorokkan dapat dikurangi dengan minum air perasan jeruk lemon.', 'Usaha meringankan rasa sakit ketika menderita sakit tenggorokkan.', 'Penyakit tenggorokkan disebabkan kebanyakan oleh virus.', 'e', '', '2018-05-16', 'Y'),
+(10, '7-1', 'Latihan Soal Bahasa Indonesia 2', '<p>Pergi pesiar naik sedan<br>\r\n   Jalannya cepat laksana kilat<br>\r\n    Jika engkau mendengar adzan<br>\r\n    Bersegeralah laksanakan salat. Ciri-ciri pantun berdasarkan contoh di atas adalah </p>', 'Terdiri atas 4 baris, berima sejajar, bersuku kata  8 s.d 12', 'Terdiri atas 4 baris, berima silang, tidak ada sampiran', 'Terdiri atas 4 baris, berima sejajar, bersampiran dan isi', 'Terdiri atas 4 baris, berima silang, bersuku kata 8 s.d 12', 'Terdiri atas 4 baris, berima sejajar, bersampiran dan isi', 'd', '', '2018-05-16', 'Y'),
+(11, '7-1', 'Latihan Soal Bahasa Indonesia 2', '<p>Pada final kejuaraan futsal antarpelajar SMP se-Kecamatan Anjatan  Bagas  membuat sejarah baru. Dalam kedudukan 2:2 dan waktu tinggal 30 detik lagi tendangan saltonya menjebol gawang lawan. Dia pun diarak keliling lapangan Paragraf yang berisi pengalaman sesuai ilustrasi tersebut adalah</p>', 'Tendangan ala Pele diperagakan dengan sempurna. Dia melakukannya di saat yang tepat. Timnya yang dalam keadaan lesu menjadi bersemangat kembali dengan gol yang dibuatnya. Tim merasa berterima kasih kepada Bagas . Dia disanjung-sanjung, dielu-elukan dalam setiap kesempatan.', 'Aku bermain mati-matian. Waktu tinggal 30 detik lagi. Fantastis final futsal kali ini. Aku berlari ke depan gawang lawan. Tiba-tiba bola melayang melawati punggungku. Aku berspekulasi, salto sambil menendang. Wow…, goool! Aku diangkat ramai-ramai diarak keliling lapangan.', 'Kami tak mengira, Bagas  bisa menyamakan kedudukan. Semula kami putus asa. Berbagai strategi kami lakukan, tetapi hasilnya nihil. Entah kesurupan apa, tiba-tiba Bagas n menyeruak ke daerah pertahanan lawan dari sayap kiri. Dia berhasil mencetak gol ke gawang lawan. .', 'Semua benar', 'Aku memiliki tendangan salto yang akurat. Barangkali hal ini akan menambah kekuatan tim. Namun, sayang hal itu tidak membuat timku berhasil. Untung, Bagas  datang menyelamatkan timku. Gol tercipta dan mengubah kedudukan menjadi 2:2.', 'a', '', '2018-05-16', 'Y'),
+(12, '7-1', 'Latihan Soal Bahasa Indonesia 3', '<p>Sabtu, 12 Desember 2015. Ibu Intan, Munirah, pulang dari Hongkong setelah ia mengadu nasib di negeri orang. Intan sudah membayangkan wajah ibu dan pelukan hangatnya, Dia berharap tak akan lagi kehilangan sosok seorang ibu.Kalimat dalam buku harian yang sesuai dengan ilustrasi adalah </p>', ' Hati Intan berdebar-debar, karena ia bertemu dengan ibunya di bandara. Dia berharap tak akan lagi kehilangan sosok seorang ibu', 'Di bandara aku menanti Ibu pulang dari Hongkong. Hatiku berdebar-debar mendengar kabar kecelakaan pesawat dari televisi.', 'Senin, 12 Desember memang hari yang menyenangkan, karena Ibu akan pulang dari Hongkong, tapi sayangnya Intan tak bisa menjemputnya di bandara.', 'Hatiku berdebar-debar menunggu Ibu di bandara hari Sabtu, 12 Desember 2015 tepat jam 13.00. Ibu yang bekerja mengadu nasib di negeri orang demi aku. Aku rindu ibu memelukku dengan hangat, tak kusadari air mataku mengalir.', 'Di bandara aku menanti Ibu pulang dari Hongkong. Hatiku berdebar-debar mendengar kabar kecelakaan pesawat dari televisi.', 'c', '', '2018-05-16', 'Y'),
+(13, '7-1', 'Latihan Soal Bahasa Indonesia 3', '<p>Hari Senin, 2 November 2015, upacara bendera di sekolahku   sedikit berbeda. Aku bertugas sebagai pembaca janji siswa agak gugup. Kebetulan yang menjadi pembina upacara kepala sekolah menyampaikan amanat tentang  bela negara.  Intisari catatan harian di atas adalah</p>', 'pembaca janji siswa', 'pembina upacara', 'bela negara', 'upacara bendera', 'pembaca janji siswa', 'c', '', '2018-05-16', 'Y'),
+(14, '7-1', 'Latihan Soal Bahasa Indonesia 3', '<p> Si kancil berjingkat-jingkat di kebun pak Tani, kancil hendak mencuri mentimun. Di tengah kebun ada boneka orang-orangan, si kancil tidak takut, sehingga dia mendekati boneka itu lalu menendangnya. Ternyata boneka orang-orangan pak Tani telah diberi getah nangka sehingga kaki si kancil menempel di boneka itu dan sulit dilepaskan. Kemudian pak Tani datang menangkap si kancil.Hal menarik dari dongeng di atas adalah </p>', 'Si kancil yang pemberani dan Pak Tani yang baik', 'Si kancil yang hendak mencuri mentimun', 'Si kancil yang serakah dan mendapat balasan dari perbuatannya', 'Si kancil berjingkat-jingkat di kebun pak Tani', 'Si kancil yang hendak mencuri mentimun', 'a', '', '2018-05-16', 'Y'),
+(15, '7-1', 'Latihan Soal Bahasa Inggris 1', '<p>My favorite animal is rabbit. Rabbit has two long ears. Its eyes are big and black, but when it is dark its eyes are red. It has two long teeth. Its nose is small and soft pink.\r\nIts tail is soft, round and small like a cotton ball. Its legs are small. It doesn’t walk, it jumps. It is vegetarian and its favorite food are carrots. Rabbits are very cute.  How many ears does the rabbit have? </p>', 'Two ears', 'Four ears', 'Three ears', 'Five ears', 'Three ears', 'a', '', '2018-05-16', 'Y'),
+(16, '7-1', 'Latihan Soal Bahasa Inggris 1', '<p>Does it has short teeth? </p>', 'Yes, it does', 'Yes, it doesn’t', ' No, it does', 'No, it doesn’t', ' No, it does', 'a', '', '2018-05-16', 'Y'),
+(17, '7-1', 'Latihan Soal Matematika 1', ' <p>Hasil dari  -4 + 10 : 2(-5) adalah </p>', ' \r\n-29', '-15', ' \r\n-12', '-5', '-4', 'c', '', '2018-05-16', 'Y'),
+(18, '7-1', 'Latihan Soal Matematika 1', 'Suhu tempat A adalah 60 C di bawah nol, suhu tempat B adalah 280C di atas nol, dan suhu tempat C adalah tepat di antara suhu tempat A dan tempat B. Suhu tempat C adalah', '-170', '-110', '110', '170', '180', 'a', '', '2018-05-16', 'Y'),
+(19, '7-1', 'Latihan Soal Matematika 1', 'Setelah berputar 18 kali, roda sepeda menempuh jarak sejauh 27 meter. Jika roda tersebut berputar  12 kali, jarak yang ditempuh adalah .', '16 meter', '\r\n18 meter', '24 meter', '43 meter', '10 meter', 'b', '', '2018-05-16', 'Y'),
+(20, '7-1', 'Latihan Soal Matematika 1', '<p>Sebuah asrama memiliki penghuni sebanyak 30 orang. Persediaan makanan yang ada diperkirakan akan habis selama 8 hari. Karena ada tambahan 10 orang penghuni, berapa hari persediaan makanan akan habis ?</p>', '\r\n6 hari', '11 hari', '\r\n15 hari', '24 hari', '20 hari', 'd', '', '2018-05-16', 'Y'),
+(21, '7-1', 'Latihan Soal Matematika 1', 'Harga pembelian 1,5 lusin buku Rp72.000,00. Buku tersebut dijual eceran dengan harga Rp5.000,00 tiap buah. Persentase untung atau ruginya adalah', '\r\nUntung 20%', 'Rugi 20%', '\r\nUntung 25%', ' \r\nRugi 25%', 'Untung 20%', 'c', '', '2018-05-16', 'Y');
 
 -- --------------------------------------------------------
 
@@ -591,11 +510,11 @@ INSERT INTO `topik_quis` (`id_tq`, `latihan`, `id_kelas`, `waktu_pengerjaan`, `m
 (40, 'Latihan Soal Bahasa Indonesia 4', '9-1', 3600, 'Bahasa Indonesia'),
 (41, 'Latihan Soal Bahasa Indonesia 5', '9-1', 3600, 'Bahasa Indonesia'),
 (42, 'Latihan Soal Bahasa Indonesia Akhir', '9-1', 3600, 'Bahasa Indonesia'),
-(43, 'Latihan Soal Tryout 1 ', '9-1', 3600, 'Tryout'),
-(44, 'Latihan Soal Tryout 2', '9-1', 3600, 'Tryout'),
-(45, 'Latihan Soal Tryout 3', '9-1', 3600, 'Tryout'),
-(46, 'Latihan Soal Tryout 4', '9-1', 3600, 'Tryout'),
-(47, 'Latihan Soal Tryout 5', '9-1', 3600, 'Tryout');
+(43, 'Latihan Soal Tryout Bahasa Indonesia', '9', 3600, 'Tryout'),
+(44, 'Latihan Soal Tryout Bahasa Inggris', '9', 3600, 'Tryout'),
+(45, 'Latihan Soal Tryout IPA', '9', 3600, 'Tryout'),
+(46, 'Latihan Soal Tryout IPS', '9', 3600, 'Tryout'),
+(47, 'Latihan Soal Tryout Matematika', '9', 3600, 'Tryout');
 
 -- --------------------------------------------------------
 
@@ -651,15 +570,9 @@ ALTER TABLE `jadwal_guru`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kelas`
+-- Indexes for table `jadwal_tryout`
 --
-ALTER TABLE `kelas`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `kritiksaran`
---
-ALTER TABLE `kritiksaran`
+ALTER TABLE `jadwal_tryout`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -718,7 +631,7 @@ ALTER TABLE `tugas`
 -- AUTO_INCREMENT for table `diskusi`
 --
 ALTER TABLE `diskusi`
-  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `guru`
@@ -739,22 +652,16 @@ ALTER TABLE `jadwal_guru`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT for table `kelas`
+-- AUTO_INCREMENT for table `jadwal_tryout`
 --
-ALTER TABLE `kelas`
-  MODIFY `id` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
-
---
--- AUTO_INCREMENT for table `kritiksaran`
---
-ALTER TABLE `kritiksaran`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `jadwal_tryout`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `materi`
@@ -766,7 +673,7 @@ ALTER TABLE `materi`
 -- AUTO_INCREMENT for table `nilai`
 --
 ALTER TABLE `nilai`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `nilaiquis`
@@ -784,7 +691,7 @@ ALTER TABLE `siswa`
 -- AUTO_INCREMENT for table `soal`
 --
 ALTER TABLE `soal`
-  MODIFY `id_soal` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_soal` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `topik_quis`

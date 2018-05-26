@@ -3,14 +3,14 @@
         <form class="forms-sample" form action="" method="POST">
                         <div class="form-group" >
                          
-                          <input type="text" class="form-control" id="cari" name="cari" placeholder="Masukkan NIS Siswa" style="width: 350px;">
+                          <input type="text" class="form-control" id="cari" name="cari" placeholder="Search Data Siswa" style="width: 350px;">
                         </div>
 <button type="submit" class="btn btn-danger btn-xs">Cari Data</button>
 
       </form><br>
 
         	<div class="alert alert-danger">
-  <img src="images/faces-clipart/pic-1.png">&nbsp;&nbsp;<strong>Data Siswa Siswi  </strong>&nbsp; SMP Negeri 34 Bekasi 
+  <img src="images/faces-clipart/pic-1.png">&nbsp;&nbsp;<strong>Data Siswa   </strong>&nbsp; SMP Negeri 34 Bekasi 
 </div>
 
 <a href="admin.php?halaman=tambahdatasiswa"><button type="button" class="btn btn-danger">Tambah Data Siswa</button></a><br><br>
@@ -36,7 +36,7 @@
                 
                 if(isset($_POST['cari'])){
                 $cari = $_POST['cari'];
-                $query = mysqli_query($konek, "SELECT id_siswa,nis,nama,id_kelas,jk FROM siswa where nis like '%".$cari."%'")or die(mysqli_error());     
+                $query = mysqli_query($konek, "SELECT id_siswa,nis,nama,id_kelas,jk FROM siswa where nis like '%".$cari."%' OR nama like '%".$cari."%' OR id_kelas like '%".$cari."%' OR jk like '%".$cari."%'" )or die(mysqli_error());     
                 }else{
 
 

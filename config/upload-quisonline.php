@@ -64,7 +64,7 @@
     if ($updaterespon)
         {
             echo "<strong><center>Materi atau Soal Anda Berhasil Diuploads</center></strong>";
-            echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../guru/guru.php?halaman=mapel">';
+            echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../guru/guru.php?halaman=teacher">';
         }
     else {
             //echo "<strong><center>Data Gagal Diubah";

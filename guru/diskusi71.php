@@ -86,7 +86,7 @@ Kota Bks, Jawa Barat 17422</font></center>
     include '../config/koneksi.php';
 
 
-    $tampil="SELECT id,nama , upload, diskusi FROM diskusi where id_kelas='7-1'";
+    $tampil="SELECT id,nama , upload, diskusi FROM diskusi where id_kelas='7-1' order by id desc";
     $hasil=mysqli_query($konek,$tampil)or die(mysqli_error($konek));
     
     

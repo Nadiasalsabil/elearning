@@ -8,25 +8,25 @@
 <p><font color="black">Jl. Wibawa Mukti IV No.32, Jatimekar, Jatiasih, Kota Bks, Jawa Barat 17422</font></p></center><hr />
 
 
-<div class="well well-sm" style="background-color: light grey;"><b>Nilai Pokok Pendidikan Kewarganegaraan Semester I</b></div>
+<div class="well well-sm" style="background-color: #F5DEB3;"><b>Nilai Pokok Pendidikan Kewarganegaraan Semester I</b></div>
    
    
         <table class="table table-striped" >
     <thead>
       <tr>
-        <th style="background-color:   #1ca0de;"><font color="white"><b><center>NO</center></b></font></th>
-         <th style="background-color:   #1ca0de;"><font color="white"><b><center>Guru</center></b></font></th>
+        <th style="background-color:   #D2691E;"><font color="white"><b><center>NO</center></b></font></th>
+         <th style="background-color:   #D2691E;"><font color="white"><b><center>Nama Guru</center></b></font></th>
        
-        <th style="background-color:   #1ca0de;"><font color="white"><b><center>NIS</center></b></font></th>
-          <th style="background-color:   #1ca0de;"><font color="white"><b><center>Kelas</center></b></font></th>
-          <th style="background-color:   #1ca0de;"><font color="white"><b><center>Semester</center></b></font></th>
-        <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nama Lengkap</center></b></font></th>
-        <th style="background-color:  #1ca0de;"><font color="white"><b><center>Mata Pelajaran</center></b></font></th>
-         <th style="background-color:  #1ca0de;"><font color="white"><b><center>Absen</center></b></font></th>
-         <th style="background-color:  #1ca0de;"><font color="white"><b><center>Tugas</center></b></font></th>
-         <th style="background-color:  #1ca0de;"><font color="white"><b><center>UTS</center></b></font></th>
-         <th style="background-color:  #1ca0de;"><font color="white"><b><center>UAS</center></b></font></th>
-           <th style="background-color:  #1ca0de;"><font color="white"><b><center>Nilai Rata-Rata</center></b></font></th>
+        <th style="background-color:   #D2691E;"><font color="white"><b><center>NIS</center></b></font></th>
+          <th style="background-color:   #D2691E;"><font color="white"><b><center>Kelas</center></b></font></th>
+          <th style="background-color:   #D2691E;"><font color="white"><b><center>Semester</center></b></font></th>
+        <th style="background-color:   #D2691E;"><font color="white"><b><center>Nama Lengkap</center></b></font></th>
+        <th style="background-color:  #D2691E;"><font color="white"><b><center>Mata Pelajaran</center></b></font></th>
+         <th style="background-color:  #D2691E;"><font color="white"><b><center>Absen</center></b></font></th>
+         <th style="background-color:  #D2691E;"><font color="white"><b><center>Tugas</center></b></font></th>
+         <th style="background-color:  #D2691E;"><font color="white"><b><center>UTS</center></b></font></th>
+         <th style="background-color:  #D2691E;"><font color="white"><b><center>UAS</center></b></font></th>
+           <th style="background-color:  #D2691E;"><font color="white"><b><center>Nilai Rata-Rata</center></b></font></th>
 
          
       </tr>
@@ -86,7 +86,7 @@
 </table>
 
 
-<div class="well well-sm" style="background-color: yellow;"><b>Nilai Rata-rata , Nilai Tertinggi dan Nilai Terendah dari Nilai Pokok Pendidikan Kewarganegaraan Semester I</b></div>
+<div class="well well-sm" style="background-color: #F5DEB3;"><b>Nilai Rata-rata , Nilai Tertinggi dan Nilai Terendah dari Nilai Pokok Pendidikan Kewarganegaraan Semester I</b></div>
 
 
 
@@ -94,9 +94,9 @@
         <table class="table table-striped" >
     <thead>
       <tr>
-        <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nilai Rata-Rata </center></b></font></th>
-         <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nilai Tertinggi </center></b></font></th>
-          <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nilai Terendah </center></b></font></th>
+        <th style="background-color: #D2691E;"><font color="white"><b><center>Nilai Rata-Rata </center></b></font></th>
+         <th style="background-color:  #D2691E;"><font color="white"><b><center>Nilai Tertinggi </center></b></font></th>
+          <th style="background-color:  #D2691E;"><font color="white"><b><center>Nilai Terendah </center></b></font></th>
         
          
       </tr>
@@ -145,8 +145,8 @@
                   
 
             ?>
-</table>
-<div class="well well-sm" style="background-color: light grey;"><b>Nilai Pokok Pendidikan Kewarganegaraan Semester 2</b></div>
+</table><hr /><hr />
+<div class="well well-sm" style="background-color:  #ADD8E6;"><b>Nilai Pokok Pendidikan Kewarganegaraan Semester 2</b></div>
    
    
         <table class="table table-striped" >
@@ -222,7 +222,7 @@
             ?>
 </table>
 
-<div class="well well-sm" style="background-color: yellow;"><b>Nilai Rata-rata , Nilai Tertinggi dan Nilai Terendah dari Nilai Pokok Pendidikan Kewarganegaraan Semester II</b></div>
+<div class="well well-sm" style="background-color:  #ADD8E6;"><b>Nilai Rata-rata , Nilai Tertinggi dan Nilai Terendah dari Nilai Pokok Pendidikan Kewarganegaraan Semester II</b></div>
 
 
 

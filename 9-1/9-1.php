@@ -99,7 +99,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                      </li>
 
 
-					<li><a href="9-1.php?halaman=jadwal"><i class="fa fa-mortar-board" style="font-size:24px;"></i>&nbsp;JADWAL </a></li>
+
+                     <li class="dropdown">
+					  <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mortar-board" style="font-size:24px;"></i>&nbsp;JADWAL<span class="caret"></span></a>
+					  <ul class="dropdown-menu" style="background-color: white;">
+					
+						<li><a href="9-1.php?halaman=jadwal"><b>Jadwal Pelajaran</b></a></li>
+						<li><a href="9-1.php?halaman=jadwaltryout"><b>Jadwal Tryout</b></a></li>
+						
+					  </ul>
+					</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
 					<li><a href="9-1.php?halaman=tugas"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;TUGAS </a></li>
 					<li><a href="9-1.php?halaman=diskusi"><i class="fa fa-user" style="font-size:24px"></i>&nbsp;DISKUSI</a></li>
 					<li><a href="../config/logout.php"><i class="fa fa-sign-out" style="font-size:24px"></i>&nbsp;LOGOUT</a></li>
@@ -189,6 +211,9 @@ include 'nilai2.php';
 
 if ($halaman=='tryout')
 include 'tryout.php';
+
+if ($halaman=='jadwaltryout')
+include 'jadwaltryout.php';
 
 
 ?>

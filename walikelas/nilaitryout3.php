@@ -7,7 +7,7 @@
 <p><font color="black">Jl. Wibawa Mukti IV No.32, Jatimekar, Jatiasih, Kota Bks, Jawa Barat 17422</font></p></center><hr />
 
 
-<div class="well well-sm" style="background-color: light grey;"><b>Nilai TRY OUT 3</b></div>
+<div class="well well-sm" style="background-color: light grey;"><b>Nilai TRY OUT Ilmu Pengetahuan Alam</b></div>
    
    
         <table class="table table-striped" >
@@ -45,7 +45,7 @@
                     
 
 
-                    $query  = mysqli_query($konek, "SELECT login.username, nilaiquis.nis,nilaiquis.kelas, nilaiquis.nama,nilaiquis.latihan, nilaiquis.nilai FROM nilaiquis, login WHERE  nilaiquis.latihan='Latihan Soal Tryout 3 ' AND  nilaiquis.kelas = login.username AND login.username = '".$_SESSION['username']."' ")or die(mysqli_error($konek));
+                    $query  = mysqli_query($konek, "SELECT login.username, nilaiquis.nis,nilaiquis.kelas, nilaiquis.nama,nilaiquis.latihan, nilaiquis.nilai FROM nilaiquis, login WHERE  nilaiquis.latihan='Latihan Soal Tryout IPA ' AND  nilaiquis.kelas = login.username AND login.username = '".$_SESSION['username']."' ")or die(mysqli_error($konek));
 
                         if(mysqli_num_rows($query) == 0){   
                                     

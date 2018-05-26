@@ -10,6 +10,11 @@
                          
                           <input type="text" class="form-control" id="cari" name="cari" placeholder="Masukkan Kelas " style="width: 350px;">
                         </div>
+
+                        <div class="form-group" >
+                         
+                          <input type="text" class="form-control" id="mencari" name="mencari" placeholder="Masukkan Mata Pelajaran " style="width: 350px;">
+                        </div>
 <button type="submit" class="btn btn-primary btn-xs">Cari Data</button>
 
       </form><br>
@@ -41,11 +46,12 @@
                 
                 if(isset($_POST['cari'])){
                 $cari = $_POST['cari'];
-                $query = mysqli_query($konek, "SELECT nis,nama,id_kelas,mapel,judul,tugas_ke,tanggal,file FROM tugas where id_kelas AND mapel like '%".$cari."%'")or die(mysqli_error());     
+                $a = $_POST['mencari'];
+                $query = mysqli_query($konek, "SELECT id,nis,nama,id_kelas,mapel,judul,tugas_ke,tanggal,file FROM tugas where id_kelas like '%".$cari."%' AND mapel like '%".$a."%'")or die(mysqli_error());     
                 }else{
 
 
-                $query  = mysqli_query($konek, "SELECT nis,nama,id_kelas,mapel,judul,tugas_ke,tanggal,file FROM tugas ")or die(mysqli_error($konek));
+                $query  = mysqli_query($konek, "SELECT id,nis,nama,id_kelas,mapel,judul,tugas_ke,tanggal,file FROM tugas ORDER BY id Desc ")or die(mysqli_error($konek));
               }
 
                       $no = 1;        
@@ -54,13 +60,13 @@
                         echo '<td><center>'.$no.'</center></td>';
                         echo '<td> '.$data['nis'].'</td>';
                         echo '<td> '.$data['nama'].'</td>';
-                          echo '<td> '.$data['id_kelas'].'</td>';
-                            echo '<td> '.$data['mapel'].'</td>';
-                              echo '<td> '.$data['judul'].'</td>';
-                                echo '<td> '.$data['tugas_ke'].'</td>';
-                                  echo '<td> '.$data['tanggal'].'</td>';
-                                    echo '<td> '.$data['file'].'</td>';
-                         echo '<td><a href=""><center>Download</center></a></td>';
+                        echo '<td> '.$data['id_kelas'].'</td>';
+                        echo '<td> '.$data['mapel'].'</td>';
+                        echo '<td> '.$data['judul'].'</td>';
+                        echo '<td><center>'.$data['tugas_ke'].'</center></td>';
+                        echo '<td> '.$data['tanggal'].'</td>';
+                        echo '<td> '.$data['file'].'</td>';
+                        echo '<td><a href="../config/simpan-download.php?id='.$data['id'].'"><center>Download File</center></a></td>';
                       
                       
                       

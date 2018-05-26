@@ -1,3 +1,96 @@
+<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+ 
+  <!-- Script Timer -->
+     <script type="text/javascript">
+        $(document).ready(function(e) {
+              /** Membuat Waktu Mulai Hitung Mundur Dengan 
+                * var detik = 0,
+                * var menit = 1,
+                * var jam = 1
+              */
+              var detik = 0;
+              var menit = 60;
+              var jam   = 0;
+				
+					              
+             /**
+               * Membuat function hitung() sebagai Penghitungan Waktu
+             */
+            function hitung() {
+                /** setTimout(hitung, 1000) digunakan untuk 
+                    * mengulang atau merefresh halaman selama 1000 (1 detik) 
+                */
+                setTimeout(hitung,1000);
+  
+               /** Jika waktu kurang dari 10 menit maka Timer akan berubah menjadi warna merah */
+               if(menit < 10 && jam == 0){
+                     var peringatan = 'style="color:red"';
+                    	 	
+               };
+
+               if(jam == 0 && menit == 0 && detik == 0){
+            		 window.alert('Batas Waktu Pengerjaan anda telah Habis');
+            		 window.location.href='jawab17.php';
+            	}
+
+     
+               /** Menampilkan Waktu Timer pada Tag #Timer di HTML yang tersedia */
+               $('#timer').html(
+                      '<h1 align="center"'+peringatan+'><font size="3px">Waktu Pengerjaan Anda <br />' + jam + ' jam : ' + menit + ' menit : ' + detik + ' detik</h1><hr>'
+
+                );
+  
+                /** Melakukan Hitung Mundur dengan Mengurangi variabel detik - 1 */
+                detik --;
+ 
+                /** Jika var detik < 0
+                    * var detik akan dikembalikan ke 59
+                    * Menit akan Berkurang 1
+                */
+                if(detik < 0) {
+                    detik = 59;
+                    menit --;
+ 
+                    /** Jika menit < 0
+                        * Maka menit akan dikembali ke 59
+                        * Jam akan Berkurang 1
+                    */
+                    if(menit < 0) {
+                        menit = 59;
+                        jam --;
+ 
+                        /** Jika var jam < 0
+                            * clearInterval() Memberhentikan Interval dan submit secara otomatis
+                        */
+                        if(jam < 0) {                                                                 
+                            clearInterval();  
+
+
+                        } 
+                    } 
+                } 
+            }
+
+            /** Menjalankan Function Hitung Waktu Mundur */
+            hitung();
+
+
+      }); 
+      // ]]>
+    </script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
+<div id='timer'></div>
+
+
+
+
+
+
+
+
+
+
+
 	<h2><center><u>Latihan Soal Matematika Akhir </u></center></h2><br>
 	
 	

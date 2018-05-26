@@ -1,7 +1,7 @@
 
 
 
-<center><h3>JADWAL PELAJARAN VIII - 1 </h3></center><br>
+<center><h3>JADWAL PELAJARAN </h3></center><br>
   <center><img src="../images/2.png" width="130px" height="130px"></center><br>
 <h4><b><center>  SMP NEGERI 34 BEKASI</h4></b></center>
 <center><font size="2px">Jl. Wibawa Mukti IV No.32, Jatimekar, Jatiasih, Kota Bekasi, Jawa Barat 17422 </font></center></b> <hr />

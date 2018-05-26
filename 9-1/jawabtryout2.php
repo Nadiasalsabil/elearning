@@ -204,7 +204,7 @@ $nis = $row['nis'];
 
   <div class="form-group">
     <label for="email">Mata Pelajaran:</label>
-    <input type="text" class="form-control" readonly id="mp" name="mp" value="Latihan Soal Tryout 2" >
+    <input type="text" class="form-control" readonly id="mp" name="mp" value="Latihan Soal Tryout Bahasa Inggris" >
   </div>
 
    <div class="form-group">

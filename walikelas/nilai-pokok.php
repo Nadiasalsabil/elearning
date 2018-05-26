@@ -8,25 +8,26 @@
 <p><font color="black">Jl. Wibawa Mukti IV No.32, Jatimekar, Jatiasih, Kota Bks, Jawa Barat 17422</font></p></center><hr />
 
 
-<div class="well well-sm" style="background-color: light grey;"><b>Nilai Pokok Bahasa Indonesia Semester I</b></div>
+<div class="well well-sm" style="background-color: #F5DEB3;"><b>Nilai Pokok Bahasa Indonesia Semester I</b></div>
    
    
         <table class="table table-striped" >
     <thead>
       <tr>
-        <th style="background-color:   #1ca0de;"><font color="white"><b><center>NO</center></b></font></th>
-         <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nama Guru</center></b></font></th>
+        <th style="background-color:   #D2691E;"><font color="white"><b><center>NO</center></b></font></th>
+         <th style="background-color:   #D2691E;"><font color="white"><b><center>Nama Guru</center></b></font></th>
        
-        <th style="background-color:   #1ca0de;"><font color="white"><b><center>NIS</center></b></font></th>
-          <th style="background-color:   #1ca0de;"><font color="white"><b><center>Kelas</center></b></font></th>
-          <th style="background-color:   #1ca0de;"><font color="white"><b><center>Semester</center></b></font></th>
-        <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nama Lengkap</center></b></font></th>
-        <th style="background-color:  #1ca0de;"><font color="white"><b><center>Mata Pelajaran</center></b></font></th>
-         <th style="background-color:  #1ca0de;"><font color="white"><b><center>Absen</center></b></font></th>
-         <th style="background-color:  #1ca0de;"><font color="white"><b><center>Tugas</center></b></font></th>
-         <th style="background-color:  #1ca0de;"><font color="white"><b><center>UTS</center></b></font></th>
-         <th style="background-color:  #1ca0de;"><font color="white"><b><center>UAS</center></b></font></th>
-           <th style="background-color:  #1ca0de;"><font color="white"><b><center>Nilai Rata-Rata</center></b></font></th>
+        <th style="background-color:   #D2691E;"><font color="white"><b><center>NIS</center></b></font></th>
+        <th style="background-color:   #D2691E;"><font color="white"><b><center>Nama Lengkap</center></b></font></th>
+          <th style="background-color:   #D2691E;"><font color="white"><b><center>Kelas</center></b></font></th>
+          <th style="background-color:   #D2691E;"><font color="white"><b><center>Semester</center></b></font></th>
+        
+        <th style="background-color:  #D2691E;"><font color="white"><b><center>Mata Pelajaran</center></b></font></th>
+         <th style="background-color:  #D2691E;"><font color="white"><b><center>Absen</center></b></font></th>
+         <th style="background-color:  #D2691E;"><font color="white"><b><center>Tugas</center></b></font></th>
+         <th style="background-color:  #D2691E;"><font color="white"><b><center>UTS</center></b></font></th>
+         <th style="background-color:  #D2691E;"><font color="white"><b><center>UAS</center></b></font></th>
+           <th style="background-color:  #D2691E;"><font color="white"><b><center>Nilai Rata-Rata</center></b></font></th>
 
          
       </tr>
@@ -65,9 +66,10 @@
                             echo '<td><center>'.$no.'</center></td>';
                             echo '<td> <center>'.$data['guru'].' <center></td>';
                             echo '<td> <center>'.$data['nis'].' <center></td>';
+                             echo '<td> <center>'.$data['nama'].'<center></td>';
                              echo '<td> <center>'.$data['kelas'].'<center></td>';
                               echo '<td> <center>'.$data['smt'].'<center></td>';
-                            echo '<td> <center>'.$data['nama'].'<center></td>';
+                           
                              echo '<td> <center>'.$data['mapel'].'<center></td>';
                             echo '<td> <center>'.$data['absen'].'<center></td>';
                             echo '<td> <center>'.$data['tugas'].' <center></td>';
@@ -86,7 +88,7 @@
 </table>
 
 
-<div class="well well-sm" style="background-color: yellow;"><b>Nilai Rata-rata , Nilai Tertinggi dan Nilai Terendah dari Nilai Pokok Bahasa Indonesia Semester I</b></div>
+<div class="well well-sm" style="background-color: #F5DEB3;"><b>Rekap Nilai Bahasa Indonesia Semester I</b></div>
 
 
 
@@ -94,9 +96,9 @@
         <table class="table table-striped" >
     <thead>
       <tr>
-        <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nilai Rata-Rata </center></b></font></th>
-         <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nilai Tertinggi </center></b></font></th>
-          <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nilai Terendah </center></b></font></th>
+        <th style="background-color: #D2691E;"><font color="white"><b><center>Nilai Rata-Rata </center></b></font></th>
+         <th style="background-color:  #D2691E;" colspan="2"><font color="white"><b><center>Nilai Tertinggi </center></b></font></th>
+          <th style="background-color:  #D2691E;"><font color="white"><b><center>Nilai Terendah </center></b></font></th>
         
          
       </tr>
@@ -121,7 +123,7 @@
                     
 
 
-                    $query  = mysqli_query($konek, "SELECT login.username, AVG(nilai.rata) As nilai_tinggi,MAX(nilai.rata) As nilai_max,MIN(nilai.rata) As nilai_min  FROM nilai, login WHERE nilai.mapel='Bahasa Indonesia' AND nilai.smt='1' AND  nilai.kelas = login.username AND login.username = '".$_SESSION['username']."' ")or die(mysqli_error($konek));
+                    $query  = mysqli_query($konek, "SELECT login.username, nilai.nama,AVG(nilai.rata) As nilai_tinggi,MAX(nilai.rata) As nilai_max,MIN(nilai.rata) As nilai_min  FROM nilai, login WHERE nilai.mapel='Bahasa Indonesia' AND nilai.smt='1' AND  nilai.kelas = login.username AND login.username = '".$_SESSION['username']."' ")or die(mysqli_error($konek));
 
                         if(mysqli_num_rows($query) == 0){   
                                     
@@ -134,6 +136,7 @@
                             echo '<tr>';
                            
                             echo '<td> <center>'.$data['nilai_tinggi'].' <center></td>';  
+                            echo '<td> <center>'.$data['nama'].' <center></td>';  
                             echo '<td> <center>'.$data['nilai_max'].' <center></td>'; 
                             echo '<td> <center>'.$data['nilai_min'].' <center></td>';             
                             echo '</tr>';
@@ -145,11 +148,11 @@
                   
 
             ?>
-</table>
+</table><hr /><hr />
 
  
 
-<div class="well well-sm" style="background-color: light grey;"><b>Nilai Pokok Bahasa Indonesia Semester II</b></div>
+<div class="well well-sm" style="background-color: #ADD8E6;"><b>Nilai Pokok Bahasa Indonesia Semester II</b></div>
    
    
 
@@ -160,9 +163,10 @@
          <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nama Guru</center></b></font></th>
        
         <th style="background-color:   #1ca0de;"><font color="white"><b><center>NIS</center></b></font></th>
+         <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nama Lengkap</center></b></font></th>
           <th style="background-color:   #1ca0de;"><font color="white"><b><center>Kelas</center></b></font></th>
           <th style="background-color:   #1ca0de;"><font color="white"><b><center>Semester</center></b></font></th>
-        <th style="background-color:   #1ca0de;"><font color="white"><b><center>Nama Lengkap</center></b></font></th>
+       
         <th style="background-color:  #1ca0de;"><font color="white"><b><center>Mata Pelajaran</center></b></font></th>
          <th style="background-color:  #1ca0de;"><font color="white"><b><center>Absen</center></b></font></th>
          <th style="background-color:  #1ca0de;"><font color="white"><b><center>Tugas</center></b></font></th>
@@ -207,9 +211,10 @@
                             echo '<td><center>'.$no.'</center></td>';
                             echo '<td> <center>'.$data['guru'].' <center></td>';
                             echo '<td> <center>'.$data['nis'].' <center></td>';
+                             echo '<td> <center>'.$data['nama'].'<center></td>';
                              echo '<td> <center>'.$data['kelas'].'<center></td>';
                               echo '<td> <center>'.$data['smt'].'<center></td>';
-                            echo '<td> <center>'.$data['nama'].'<center></td>';
+                           
                              echo '<td> <center>'.$data['mapel'].'<center></td>';
                             echo '<td> <center>'.$data['absen'].'<center></td>';
                             echo '<td> <center>'.$data['tugas'].' <center></td>';
@@ -227,7 +232,7 @@
             ?>
 </table>
 
-<div class="well well-sm" style="background-color: yellow;"><b>Nilai Rata-rata , Nilai Tertinggi dan Nilai Terendah dari Nilai Pokok Bahasa Indonesia Semester II</b></div>
+<div class="well well-sm" style="background-color: #ADD8E6;"><b>Nilai Rata-rata , Nilai Tertinggi dan Nilai Terendah dari Nilai Pokok Bahasa Indonesia Semester II</b></div>
 
 
 

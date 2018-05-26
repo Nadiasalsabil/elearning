@@ -75,37 +75,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class="dropdown">
 					  <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;NILAI<span class="caret"></span></a>
 					  <ul class="dropdown-menu" style="background-color: white;">
-					  	<li><a href="wali-kelas.php?halaman=nilai-pokok"><b>Bahasa Indonesia</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaimatematika"><b>Matematika</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaibhsinggris"><b>Bahasa Inggris</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaiipa"><b>IPA</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaiips"><b>IPS</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaiprakarya"><b>Prakarya</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaipkn"><b>PKN</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaipai"><b>PAI</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaipenjaskes"><b>PENJASKES</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaiplh"><b>PLH</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaibahasasunda"><b>Bahasa Sunda</b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilai-pokok"><b><font color="#1ca0de;">Bahasa Indonesia</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaimatematika"><b><font color="#1ca0de;">Matematika</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaibhsinggris"><b><font color="#1ca0de;">Bahasa Inggris</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiipa"><b><font color="#1ca0de;">IPA</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiips"><b><font color="#1ca0de;">IPS</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiprakarya"><b><font color="#1ca0de;">Prakarya</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaipkn"><b><font color="#1ca0de;">PKN</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaipai"><b><font color="#1ca0de;">PAI</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaipenjaskes"><b><font color="#1ca0de;">PENJASKES</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaiplh"><b><font color="#1ca0de;">PLH</font></b></a></li>
+					  	<li><a href="wali-kelas.php?halaman=nilaibahasasunda"><b><font color="#1ca0de;">Bahasa Sunda</font></b></a></li>
 					  </ul>
 				</li>
 
-				<li class="dropdown">
-					  <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;NILAI QUIS ONLINE<span class="caret"></span></a>
-					  <ul class="dropdown-menu" style="background-color: white;">
-					  	<li><a href="wali-kelas.php?halaman=nilai-quis"><b>Bahasa Indonesia</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaiquismtk"><b>Matematika</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaiquisinggris"><b>Bahasa Inggris</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaiquisipa"><b>IPA</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaiquisips"><b>IPS</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaitryout1"><b>TRY OUT I</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaitryout2"><b>TRY OUT II</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaitryout3"><b>TRY OUT III</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaitryout4"><b>TRY OUT IV</b></a></li>
-					  	<li><a href="wali-kelas.php?halaman=nilaitryout5"><b>TRY OUT V</b></a></li>
-					  	
-					  </ul>
-				</li>
-					
+				
+				<li><a href="wali-kelas.php?halaman=nilai-quis"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;NILAI QUIS ONLINE</a></li>
+
+
 					<li><a href="wali-kelas.php?halaman=diskusi"><i class="fa fa-user" style="font-size:24px"></i>&nbsp;DISKUSI</a></li>
 					<li><a href="../config/logout.php"><i class="fa fa-sign-out" style="font-size:24px"></i>&nbsp;LOGOUT</a></li>
 
@@ -120,15 +107,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div><!-- /.navbar-collapse -->
 				 
 			</nav>
-			
+			<div class="clearfix"></div>
 		<!-- //navigation -->
 			</div>
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
 		<div class="banner-text"> 
-			
-			
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider3">
+					<li>
+						<div class="slider-info">
+							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
+							<h4> Successful career starts with good education</h4>
+						
+						</div>
+					</li>
+					<li>
+					
+
+				</ul>
+				
+			</div>
+			<div class="clearfix"></div>	
 		</div>
 	</div>
 <!-- //banner -->

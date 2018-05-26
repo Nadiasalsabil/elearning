@@ -74,6 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					
 					<li><a href="guru.php?halaman=teacher"><i class="fa fa-book" style="font-size:24px"></i>&nbsp;GURU</a></li>
 					
+				
 					
 					<li class="dropdown">
 					  <a href=" " class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;NILAI<span class="caret"></span></a>
@@ -84,6 +85,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						</ul>
 					</li>
+
+
 					 
 					
 					<li><a href="guru.php?halaman=tugas"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;TUGAS</a></li>
