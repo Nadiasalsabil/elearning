@@ -118,25 +118,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
-		<div class="banner-text"> 
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="slider-info">
-							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-						
-						</div>
-					</li>
-					<li>
-					
-
-				</ul>
-				
-			</div>
-			<div class="clearfix"></div>	
-		</div>
-	</div>
+		
 <!-- //banner -->
 <!--services-section-->
 <div class="services-w3layouts" id="services">

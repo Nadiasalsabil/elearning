@@ -191,7 +191,7 @@ $hasil=mysqli_query($konek,$edit)or die(mysqli_error($konek));
 $data=mysqli_fetch_array($hasil);
 ?>
 
-<form  class="forms-sample" action="../config/updatesiswa.php" method="post">
+<form action="../config/updatesiswa.php" method="post"  class="forms-sample" >
 	  <div class="form-group row">
 	  	 <input type="hidden" class="form-control" id="id" name="id" value=<?php echo $data['id_siswa']; ?>>
 	  	</div>
@@ -202,13 +202,14 @@ $data=mysqli_fetch_array($hasil);
                             <input type="text" class="form-control" id="nis" name="nis" value=<?php echo $data['nis'];?>>
                           </div>
                         </div>
+
                         <div class="form-group row">
-                          <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Nama Lengkap</label>
+                          <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Nama Lengkap </label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" id="nama" name="nama" value=<?php echo $data['nama'];?>>
-
                           </div>
                         </div>
+                       
 
                           <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Kelas</label>
