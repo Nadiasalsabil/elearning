@@ -17,7 +17,7 @@ $data=mysqli_query($konek,$input) or die (mysqli_error($konek));
 
 if($data){
 	echo "<strong><center>Anda telah berhasil menambahkan data Siswa";
-	echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/admin.php?halaman=datasiswa">'; 
+	echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../admin/admin.php?halaman=tambahdatasiswa">'; 
 }
 
 ?>

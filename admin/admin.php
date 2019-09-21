@@ -56,9 +56,9 @@
         <ul class="nav">
           <li class="nav-item nav-profile">
             <div class="nav-link">
-              <div class="profile-image"> <img src="images/faces/me.jpg" alt="image"/> <span class="online-status online"></span> </div>
+              <div class="profile-image"> <img src="../images/2.png" alt="image"/> <span class="online-status online"></span> </div>
               <div class="profile-name">
-                <p class="name">Nadia Salsabil</p>
+               
                 <p class="designation">Admin</p>
                 <div class="badge badge-teal mx-auto mt-3">SMP N 34 Bekasi</div>
               </div>

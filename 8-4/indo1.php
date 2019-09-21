@@ -1,7 +1,5 @@
-<script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
- 
-  <!-- Script Timer -->
-     <script type="text/javascript">
+<!-- Script Timer -->
+<script type="text/javascript">
         $(document).ready(function(e) {
               /** Membuat Waktu Mulai Hitung Mundur Dengan 
                 * var detik = 0,

@@ -3,6 +3,10 @@
 <center><i class="fa fa-book" aria-hidden="false" style="font-size:70px" ></i></center><br>
 <h5 class="title-w3">BAHASA INGGRIS</h5><hr />
 
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
 
 <div class="well well-sm">Download Materi / Soal</div>
 
@@ -15,6 +19,7 @@
          <th style="background-color: #1ca0de;"><font color="white"><b><center>Bab</center></b></font></th>
          <th style="background-color: #1ca0de;"><font color="white"><b><center>Tanggal</center></b></font></th>
          <th style="background-color: #1ca0de;"><font color="white"><b><center>File</center></b></font></th>
+         <th style="background-color: #1ca0de;"><font color="white"><b><center>Action</center></b></font></th>
        
         
       </tr>
@@ -45,8 +50,8 @@
                         echo '<td> <center>'.$data['judul'].'<center></td>';
                         echo '<td> <center>'.$data['bab'].'<center></td>';
                         echo '<td> <center>'.$data['tanggal'].' <center></td>';
-                        echo '<td> <center> <embed src="'.$data['file'].'" width="500" height="300"></embed><center></td>';
-                        
+                         echo '<td> <center> '.$data['file'].'<center></td>';
+                        echo '<td><a href="../config/simpan71.php?id='.$data['id'].'"><center>Download File</center></a></td>';
                        
                        
                    
@@ -57,6 +62,8 @@
               
                 ?>
 </table>
+</div>
+</div><br></hr>
 
 
 
@@ -66,7 +73,10 @@
 
 
 
-
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
 
 
 
@@ -143,7 +153,11 @@
               
                 ?>
 </table>
+</div>
+</div><br><hr />
 
+</div>
+</div>
 
 
 

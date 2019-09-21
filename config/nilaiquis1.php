@@ -16,7 +16,7 @@ $data=mysqli_query($konek,$input) or die(mysql_error());
 
 if($data){
 	echo "<strong><center>Nilai Anda berhasil disimpan";
-	echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../8-4/8-4.php">'; 
+	echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../8-4/8-4.php?halaman=awal84">'; 
 }
 
 ?>

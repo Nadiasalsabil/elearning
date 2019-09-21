@@ -198,7 +198,7 @@ $data=mysqli_fetch_array($hasil);
                         <div class="form-group row">
                           <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Waktu </label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="waktu" name="waktu" value=<?php echo $data['waktu'];?>>
+                            <input type="text" class="form-control" id="waktu" name="waktu" value="<?php echo $data['waktu'];?>">
                           </div>
                         </div>
                         <div class="form-group row">
@@ -212,14 +212,14 @@ $data=mysqli_fetch_array($hasil);
                           <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Pelajaran</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="pelajaran" name="pelajaran" value=<?php echo $data['pelajaran'];?>>
+                            <input type="text" class="form-control" id="pelajaran" name="pelajaran" value="<?php echo $data['pelajaran'];?>">
                           </div>
                         </div>
                          
                           <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Guru</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="guru" name="guru" value=<?php echo $data['guru'];?>>
+                            <input type="text" class="form-control" id="guru" name="guru" value="<?php echo $data['guru'];?>">
                           </div>
                         </div>
 

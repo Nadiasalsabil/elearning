@@ -204,9 +204,9 @@ $data=mysqli_fetch_array($hasil);
                         </div>
 
                         <div class="form-group row">
-                          <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Nama Lengkap </label>
+                          <label for="nama" class="col-sm-3 col-form-label">Nama Lengkap </label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="nama" name="nama" value=<?php echo $data['nama'];?>>
+                            <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama'];?>">
                           </div>
                         </div>
                        

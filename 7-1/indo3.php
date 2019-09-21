@@ -110,7 +110,7 @@
 			$pilihan_e=$row["e"];  
 			
 			?>
-			<form name="form1" method="post" action="jawab2.php">
+			<form name="form1" method="post" action="jawab2.php?id_tq=<?php echo $_GET['id_tq']; ?>">
 			<input type="hidden" name="id[]" value=<?php echo $id; ?>>
 			<input type="hidden" name="jumlah" value=<?php echo $jumlah; ?>>
 			<tr>
@@ -119,7 +119,7 @@
 			</tr>
 			<?php
 				if (!empty($row["gambar"])) {
-					echo "<tr><td></td><td><img src='foto/$row[gambar]' width='200' hight='200'></td></tr>";
+					echo "<tr><td></td><td><img src='$row[gambar]' width='200' hight='200'></td></tr>";
 				}
 			?>
 			<tr>

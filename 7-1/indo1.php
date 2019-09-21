@@ -1,18 +1,30 @@
  <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
  
   <!-- Script Timer -->
-     <script type="text/javascript">
+      <script type="text/javascript">
         $(document).ready(function(e) {
               /** Membuat Waktu Mulai Hitung Mundur Dengan 
                 * var detik = 0,
                 * var menit = 1,
                 * var jam = 1
               */
+
+              <?php
+                           include '../config/koneksi.php';
+                            $query = "SELECT * FROM topik_quis WHERE latihan = 'Latihan Soal Bahasa Indonesia 1' ";
+                            $exec = mysqli_query($konek, $query) or die(mysqli_error($konek));
+                            $row = mysqli_fetch_array($exec);
+
+                            
+
+
+                             ?>
               var detik = 0;
-              var menit = 60;
+              var menit = <?php echo $row['status']?>;
+              
               var jam   = 0;
-				
-					              
+        
+                        
              /**
                * Membuat function hitung() sebagai Penghitungan Waktu
              */
@@ -25,13 +37,13 @@
                /** Jika waktu kurang dari 10 menit maka Timer akan berubah menjadi warna merah */
                if(menit < 10 && jam == 0){
                      var peringatan = 'style="color:red"';
-                    	 	
+                        
                };
 
                if(jam == 0 && menit == 0 && detik == 0){
-            		 window.alert('Batas Waktu Pengerjaan anda telah Habis');
-            		 window.location.href='jawab.php';
-            	}
+                 window.alert('Batas Waktu Pengerjaan anda telah Habis');
+                 window.location.href='jawab.php';
+              }
 
      
                /** Menampilkan Waktu Timer pada Tag #Timer di HTML yang tersedia */
@@ -117,7 +129,7 @@
 			$pilihan_e=$row["e"];  
 			
 			?>
-			<form name="form1" method="post" action="jawab.php">
+			<form name="form1" method="post" action="jawab.php?id_tq=<?php echo $_GET['id_tq']; ?>">
 			<input type="hidden" name="id[]" value=<?php echo $id; ?>>
 			<input type="hidden" name="jumlah" value=<?php echo $jumlah; ?>>
 			<tr>
@@ -172,7 +184,8 @@
 
         	<tr>
 				<td>&nbsp;</td>
-			  	<td><input type="submit" name="submit" value="Selesai" onclick="return confirm('Apakah Anda yakin dengan jawaban Anda?')"></td>
+				
+			  	<td><br><input type="submit" name="submit" value="Selesai" onclick="return confirm('Apakah Anda yakin dengan jawaban Anda?')"></td>
             </tr>
 			</table>
 </form>

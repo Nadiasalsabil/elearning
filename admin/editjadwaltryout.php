@@ -199,13 +199,13 @@ $data=mysqli_fetch_array($hasil);
                         <div class="form-group row">
                           <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Tanggal </label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="tanggal" name="tanggal" value=<?php echo $data['tanggal'];?>>
+                            <input type="date" class="form-control" id="tanggal" name="tanggal" value=<?php echo $data['tanggal'];?>>
                           </div>
                         </div>
                         <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Mata Pelajaran</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="mapel" name="mapel" value=<?php echo $data['mapel'];?>>
+                            <input type="text" class="form-control" id="mapel" name="mapel" value="<?php echo $data['mapel'];?>">
 
                           </div>
                         </div>

@@ -9,6 +9,10 @@
     <div class="container"> 
 
 
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
 
 
 <div class="well well-sm">Nilai Quis Online </div>
@@ -77,6 +81,14 @@
 
             ?>
 </table>
+</div>
+</div><br><hr />
+
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
+
 
 <div class="well well-sm">Grafik Nilai Quis Online </div>
 
@@ -146,7 +158,10 @@ $(document).ready(function() {
 
   
     <div id='container'></div>    
-
+</div>
+</div>
+</div>
+</div>
 
 
 </div>

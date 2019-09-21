@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>				  
 				<div class="w3-logo">
-					<h3><a href="#">E-Learning </h3> <br>
+					<h3><a href="7-1.php?halaman=awal71">E-Learning </h3> <br>
 					<font size="4px">SMP Negeri 34 Bekasi</font></a>
 					
 				</div>
@@ -151,8 +151,12 @@ include 'ips.php';
 if ($halaman=='jadwal')
 include 'jadwal.php';
 
-if ($halaman=='tugas')
+if ($halaman=='tugas1')
 include 'tugas.php';
+
+if ($halaman=='tugas')
+include 'deadline.php';
+
 
 if ($halaman=='diskusi')
 include 'diskusi.php';
@@ -165,6 +169,11 @@ include 'nilaiquis.php';
 
 if ($halaman=='nilai2')
 include 'nilai2.php';
+
+if ($halaman=='awal71')
+include 'awal71.php';
+
+
 
 
 ?>
@@ -190,7 +199,7 @@ include 'nilai2.php';
 <!-- Footer -->
 
 			<div class="copyright-wthree">
-				<p>&copy; 2018 E-Learning . All Rights Reserved | SMP Negeri 34 Bekasi </a></p>
+				<p>&copy; 2018 <b>E-Learning</b> | SMP Negeri 34 Bekasi | By :<b> Nadia Salsabil </b> </a></p>
 			</div>
 <!-- //Footer -->
 
@@ -357,10 +366,12 @@ include 'nilai2.php';
  				<center> <button type="button" class="btn btn-info btn-lg" >Login</button></center>
 				</form>
         </div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
+ 
       
     </div>
   </div>

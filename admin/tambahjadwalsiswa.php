@@ -63,9 +63,26 @@
                         </div>
 
                           <div class="form-group row">
-                          <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Kelas</label>
+                          <label class="col-sm-3 col-form-label">Kelas</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="kelas" name="kelas" placeholder="7-1">
+                            <select class="form-control"  id="kelas" name="kelas">
+                              <option>7-1</option>
+                              <option>7-2</option>
+                              <option>7-3</option>
+                              <option>7-4</option>
+                              <option>7-5</option>
+                              <option>8-1</option>
+                              <option>8-2</option>
+                              <option>8-3</option>
+                              <option>8-4</option>
+                              <option>8-5</option>
+                              <option>9-1</option>
+                              <option>9-2</option>
+                              <option>9-3</option>
+                              <option>9-4</option>
+                              <option>9-5</option>
+                             
+                            </select>
                           </div>
                         </div>
 

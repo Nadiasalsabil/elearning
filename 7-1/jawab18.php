@@ -69,46 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
-		<div class="banner-text"> 
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="slider-info">
-							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-						
-						</div>
-					</li>
-					<li>
-					
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Make the best choice for your education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>Preparing for successful future</h3>
-							<h4> Make the best choice for your education</h4>
-						   
-						</div>
-					</li>
-
-				</ul>
-				
-			</div>
+		
 			<div class="clearfix"></div>	
 		</div>
 	</div>
@@ -124,6 +85,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			$pilihan=$_POST["pilihan"];
 			$id_soal=$_POST["id"];
 			$jumlah=$_POST['jumlah'];
+		
+
+
 			
 			$score=0;
 			$benar=0;
@@ -165,6 +129,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				$score = 100/$jumlah_soal*$benar;
 				$hasil = number_format($score,1);
 			}
+
+			$id_siswa=$_GET['nis'];
+			$kelas=$_GET['kelas'];
+			$nama = $_GET['nama'];
+			$latihan = $_GET['latihan'];
+			$id_tq = $_GET['id_tq'];
+
+
+      $input="INSERT INTO nilaiquis(id_quis,nis,kelas,nama,latihan,nilai)values('','$id_siswa','$kelas','$nama','$latihan','$score')";
+      $data=mysqli_query($konek,$input) or die(mysql_error());
+
+
+$input2="INSERT INTO statussoal values('$id_siswa', '$id_tq', 1)";
+$data2=mysqli_query($konek,$input2) or die(mysql_error());
+
+if($data && $data2){
+	echo "<strong><center>Nilai Anda berhasil disimpan";
+	echo '<META HTTP-EQUIV="REFRESH" CONTENT = "1; URL=../7-1/7-1.php?halaman=awal71">'; 
+}
+
+
 		}
 
 		//Lakukan Penyimpanan Kedalam Database
@@ -172,64 +157,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	
 		?>
 
-<?php
-
-session_start();
-
-include '../config/koneksi.php';
-
-$query = "SELECT * FROM siswa WHERE nis = '".$_SESSION['username']."' ";
-$exec = mysqli_query($konek, $query) or die(mysqli_error($konek));
-$row = mysqli_fetch_array($exec);
-
-$nis = $row['nis'];
-
-?>
-
- <form action="../config/nilaiquis.php" method="post">
-  <div class="form-group">
-    <label for="email">Nomor Induk Siswa:</label>
-    <input type="text" class="form-control" readonly id="nis" name="nis" value="<?php echo $row['nis']; ?>">
-  </div>
-
-  <div class="form-group">
-    <label for="email">Kelas:</label>
-    <input type="text" class="form-control" readonly id="kls" name="kls" value="<?php echo $row['id_kelas']; ?>" >
-  </div>
-
-   <div class="form-group">
-    <label for="email">Nama:</label>
-    <input type="text" class="form-control" readonly id="nama" name="nama" value="<?php echo $row['nama']; ?>">
-  </div>
-
-  <div class="form-group">
-    <label for="email">Mata Pelajaran:</label>
-    <input type="text" class="form-control" readonly id="mp" name="mp" value="Latihan Soal IPA 1" >
-  </div>
-
-   <div class="form-group">
-    <label for="email">Jawaban Benar:</label>
-    <input type="text" class="form-control" readonly id="jb" name="jb" value=<?php echo "$benar";?>>
-  </div>
-
-  <div class="form-group">
-    <label for="email">Jawaban Salah:</label>
-    <input type="text" class="form-control" readonly id="js" name="js" value=<?php echo "$salah";?>>
-  </div>
-
-  <div class="form-group">
-    <label for="email">Jawaban Kosong:</label>
-    <input type="text" class="form-control" readonly id="jk" name="jk" value=<?php echo "$kosong";?>>
-  </div>
-
-  <div class="form-group">
-    <label for="email">Nilai:</label>
-    <input type="text" class="form-control" readonly id="ni" name="ni" value=<?php echo "$score";?>>
-  </div>
-  
-  <button type="submit" class="btn btn-primary">Submit</button>
+<!-- <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-		
+		 -->
 
 
 </div>

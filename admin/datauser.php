@@ -5,7 +5,7 @@
      <form class="forms-sample" form action="" method="POST">
                         <div class="form-group">
                          
-                          <input type="text" class="form-control" id="cari" name="cari" placeholder="Masukkan Username" style="width: 350px;">
+                          <input type="text" class="form-control" id="cari" name="cari" placeholder="Masukkan Pencarian ......" style="width: 900 px;">
                         </div>
 <button type="submit" class="btn btn-success btn-xs">Cari Data</button>
 
@@ -15,6 +15,9 @@
   <img src="images/faces-clipart/pic-3.png">&nbsp;&nbsp;<strong>Data User</strong>&nbsp; SMP Negeri 34 Bekasi 
 </div>
 <a href="admin.php?halaman=tambahdatauser"><button type="button" class="btn btn-success">Tambah Data User</button></a><br><br>
+ 
+
+ 
  <table class="table table-bordered">
     <thead>
       <tr>
@@ -35,7 +38,7 @@
 
             if(isset($_POST['cari'])){
             $cari = $_POST['cari'];
-           $query = mysqli_query($konek, "SELECT id,username,password,level FROM login where username like '%".$cari."%' OR level like '%".$cari."%'")or die(mysqli_error());     
+           $query = mysqli_query($konek, "SELECT id,username,password,level FROM login where username like '%".$cari."%' OR password like '%".$cari."%' OR level like '%".$cari."%'")or die(mysqli_error());     
              }else{
 
             $query = mysqli_query($konek, "SELECT id,username,password,level FROM login")or die(mysqli_error());
@@ -61,12 +64,11 @@
      
   </table><br>
 
-   
+  
 
               <div class="card">
                 <div class="card-body">
  
-
 
 
 

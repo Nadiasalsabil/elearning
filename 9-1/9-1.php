@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 <!-- banner -->
-	<div class="banner" id="home">
+	
 		<!-- header -->
 		<header>
 			<div class="container">
@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>				  
 				<div class="w3-logo">
-					<h3><a href="#">E-Learning </h3> <br>
+					<h3><a href="9-1.php?halaman=awal91">E-Learning </h3> <br>
 					<font size="4px">SMP Negeri 34 Bekasi</font></a>
 					
 				</div>
@@ -100,33 +100,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
-                     <li class="dropdown">
-					  <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mortar-board" style="font-size:24px;"></i>&nbsp;JADWAL<span class="caret"></span></a>
-					  <ul class="dropdown-menu" style="background-color: white;">
-					
-						<li><a href="9-1.php?halaman=jadwal"><b>Jadwal Pelajaran</b></a></li>
-						<li><a href="9-1.php?halaman=jadwaltryout"><b>Jadwal Tryout</b></a></li>
-						
-					  </ul>
-					</li>
 
-
-
-
-
-
-
-
-
-
-
-
+                    <li><a href="9-1.php?halaman=jadwal"><i class="fa fa-mortar-board" style="font-size:24px;"></i>&nbsp;JADWAL </a></li>
 
 					<li><a href="9-1.php?halaman=tugas"><i class="fa fa-wpforms" style="font-size:24px"></i>&nbsp;TUGAS </a></li>
 					<li><a href="9-1.php?halaman=diskusi"><i class="fa fa-user" style="font-size:24px"></i>&nbsp;DISKUSI</a></li>
 					<li><a href="../config/logout.php"><i class="fa fa-sign-out" style="font-size:24px"></i>&nbsp;LOGOUT</a></li>
-
-					
 					
 					
 					
@@ -143,22 +122,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
-		<div class="banner-text"> 
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="slider-info">
-							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-						
-						</div>
-					</li>
-					<li>
-					
-
-				</ul>
-				
-			</div>
+		
 			<div class="clearfix"></div>	
 		</div>
 	</div>
@@ -215,6 +179,8 @@ include 'tryout.php';
 if ($halaman=='jadwaltryout')
 include 'jadwaltryout.php';
 
+if ($halaman=='awal91')
+include 'awal91.php';
 
 ?>
 

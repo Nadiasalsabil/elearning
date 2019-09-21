@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
 <!-- banner -->
-	<div class="banner" id="home">
+	
 		<!-- header -->
 		<header>
 			<div class="container">
@@ -62,7 +62,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>				  
 				<div class="w3-logo">
-					<h3><a href="#">E-Learning </h3> <br>
+					<h3><a href="8-4.php?halaman=awal84">E-Learning </h3> <br>
 					<font size="4px">SMP Negeri 34 Bekasi</font></a>
 					
 				</div>
@@ -93,7 +93,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					  <ul class="dropdown-menu" style="background-color: white;">
 						<li><a href="8-4.php?halaman=nilai"><b>Nilai Semester I</b></a></li>
 						<li><a href="8-4.php?halaman=nilai2"><b>Nilai Semester II</b></a></li>
-						<li><a href="8-4.php?halaman=nilai"><b>Nilai Quis Online</b></a></li>
+						<li><a href="8-4.php?halaman=nilaiquis"><b>Nilai Quis Online</b></a></li>
 					</ul>
                      </li>
 
@@ -120,22 +120,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
-		<div class="banner-text"> 
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="slider-info">
-							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-						
-						</div>
-					</li>
-					<li>
-					
-
-				</ul>
-				
-			</div>
+		
 			<div class="clearfix"></div>	
 		</div>
 	</div>
@@ -186,6 +171,8 @@ include 'nilaiquis.php';
 if ($halaman=='nilai2')
 include 'nilai2.php';
 
+if ($halaman=='awal84')
+include 'awal84.php';
 
 ?>
 
@@ -210,7 +197,7 @@ include 'nilai2.php';
 <!-- Footer -->
 
 			<div class="copyright-wthree">
-				<p>&copy; 2018 E-Learning . All Rights Reserved | SMP Negeri 34 Bekasi </a></p>
+				<p>&copy; 2018 <b>E-Learning</b> | SMP Negeri 34 Bekasi |<b> Nadia Salsabil </b> </a></p>
 			</div>
 <!-- //Footer -->
 

@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>				  
 				<div class="w3-logo">
-					<h3><a href="#">E-Learning </h3> <br>
+					<h3><a href="7-1.php?halaman=awal71">E-Learning </h3> <br>
 					<font size="4px">SMP Negeri 34 Bekasi</font></a>
 					
 				</div>
@@ -69,46 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
-		<div class="banner-text"> 
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="slider-info">
-							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-						
-						</div>
-					</li>
-					<li>
-					
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Make the best choice for your education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>Preparing for successful future</h3>
-							<h4> Make the best choice for your education</h4>
-						   
-						</div>
-					</li>
-
-				</ul>
-				
-			</div>
+		
 			<div class="clearfix"></div>	
 		</div>
 	</div>
@@ -186,7 +147,7 @@ $nis = $row['nis'];
 
 ?>
 
- <form action="../config/nilaiquis.php" method="post">
+ <form action="../config/nilaiquis.php?id_tq=<?php echo $_GET['id_tq']; ?>" method="post">
   <div class="form-group">
     <label for="email">Nomor Induk Siswa:</label>
     <input type="text" class="form-control" readonly id="nis" name="nis" value="<?php echo $row['nis']; ?>">
@@ -204,7 +165,7 @@ $nis = $row['nis'];
 
   <div class="form-group">
     <label for="email">Mata Pelajaran:</label>
-    <input type="text" class="form-control" readonly id="mp" name="mp" value="Latihan Soal Bahasa Indonesia 3" >
+    <input type="text" class="form-control" readonly id="mp" name="mp" value="Latihan Soal Bahasa Indonesia 2" >
   </div>
 
    <div class="form-group">

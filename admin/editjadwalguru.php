@@ -56,7 +56,7 @@
         <ul class="nav">
           <li class="nav-item nav-profile">
             <div class="nav-link">
-              <div class="profile-image"> <img src="images/faces/me.jpg" alt="image"/> <span class="online-status online"></span> </div>
+              <div class="profile-image"> <img src="../images/2.png" alt="image"/> <span class="online-status online"></span> </div>
               <div class="profile-name">
                 <p class="name">Nadia Salsabil</p>
                 <p class="designation">Admin</p>
@@ -204,7 +204,7 @@ $data=mysqli_fetch_array($hasil);
                         <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Nama Lengkap</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="nama" name="nama" value=<?php echo $data['nama'];?>>
+                            <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama'];?>">
 
                           </div>
                         </div>
@@ -212,7 +212,7 @@ $data=mysqli_fetch_array($hasil);
                           <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Mata Pelajaran</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="mapel" name="mapel" value=<?php echo $data['mapel'];?>>
+                            <input type="text" class="form-control" id="mapel" name="mapel" value="<?php echo $data['mapel'];?>">
                           </div>
                         </div>
                          

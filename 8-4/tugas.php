@@ -5,6 +5,12 @@
     
           <center><font color="#1ca0de"> <h2>SMP Negeri 34 Bekasi </h2></font></center>
           <center><font color="black">Jl. Wibawa Mukti IV No.32, Jatimekar, Jatiasih, Kota Bks, Jawa Barat 17422</font></center><br>
+          <hr /><br>
+
+        <div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
 
 <div class="well well-sm">Upload  Tugas</div>
   <form action="../config/upload1.php" method="POST" enctype="multipart/form-data">
@@ -82,6 +88,8 @@ $nis = $row['nis'];
   <button type="submit" class="btn btn-primary">Upload</button>
 </form>
 
-
+</div>
+</div>
+</div>
 </div>
 </div>

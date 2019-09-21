@@ -45,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- banner -->
-	<div class="banner" id="home">
+	
 		<!-- header -->
 		<header>
 			<div class="container">
@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>				  
 				<div class="w3-logo">
-					<h3><a href="#">E-Learning </h3> <br>
+					<h3><a href="wali-kelas.php?halaman=awalwalikelas">E-Learning </h3> <br>
 					<font size="4px">SMP Negeri 34 Bekasi</font></a>
 					
 				</div>
@@ -113,22 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
-		<div class="banner-text"> 
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="slider-info">
-							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-						
-						</div>
-					</li>
-					<li>
-					
-
-				</ul>
-				
-			</div>
+		
 			<div class="clearfix"></div>	
 		</div>
 	</div>
@@ -208,6 +193,9 @@ include 'nilaitryout4.php';
 
 if ($halaman=='nilaitryout5')
 include 'nilaitryout5.php';
+
+if ($halaman=='awalwalikelas')
+include 'awalwalikelas.php';
 
 ?>	
 
@@ -409,6 +397,7 @@ include 'nilaitryout5.php';
   </div>
   
 </div>
+
 
 </body>
 </html>

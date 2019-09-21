@@ -22,7 +22,8 @@ one = document.autoSumForm.abs.value;
 two = document.autoSumForm.tgs.value;
 three = document.autoSumForm.uts.value;
 four = document.autoSumForm.uas.value;
-document.autoSumForm.rata2.value = (one/4) + (two/4) + (three/4 ) + (four/4)  ;}
+five = document.autoSumForm.nilai1.value;
+document.autoSumForm.rata2.value = (one*0.1) + (two*0.2) + (three*0.2 ) + (four*0.3) + (five*0.2) ;}
 function stopCalc(){
 clearInterval(interval);}
 </script>
@@ -39,7 +40,7 @@ $nip = $row['nip'];
 ?>
 <div class="form-group">
     <label for="email">Nama Guru :</label>
-    <input type="text" class="form-control" id="guru" name="guru" value="<?php echo $row['nip']; ?>" readonly>
+    <input type="text" class="form-control" id="guru" name="guru" value="<?php echo $row['nama']; ?>" readonly>
   </div>
 
 
@@ -67,7 +68,7 @@ $nip = $row['nip'];
       </div>
   <div class="form-group">
     <label for="email">Nomor Induk Siswa:</label>
-    <input type="text" class="form-control" id="nis" name="nis" placeholder="Ex: 201810896">
+    <input type="text" class="form-control" id="nis" name="nis" placeholder="Ex: 201810896" onkeyup="autofill()">
   </div>
 
   <div class="form-group">
@@ -85,7 +86,7 @@ $nip = $row['nip'];
   </div>
  <div class="form-group">
       <label for="mapel">Mata Pelajaran:</label>
-     <center><select size="1" class="form-control" id="mapel1" name="mapel1" >
+     <center><select size="1" class="form-control" id="mapel1" name="mapel1" onkeyup="autofill()">
      <option>Bahasa Indonesia
      <option>Bahasa Inggris
      <option>Matematika
@@ -118,6 +119,28 @@ $nip = $row['nip'];
     <input type="text" class="form-control" id="uas" name="uas" onFocus="startCalc();" onBlur="stopCalc();" placeholder="Ex : 88">
   </div>
 
+
+<?php
+
+
+
+
+
+
+$query = "SELECT AVG(nilai) as nilaii FROM nilaiquis where mapel = 'Bahasa Indonesia' ";
+
+$exec = mysqli_query($konek, $query) or die(mysqli_error($konek));
+$row = mysqli_fetch_array($exec);
+
+// $nip = $row['nis'];
+?>
+
+
+ <div class="form-group">
+    <label for="email">Nilai Quis Online:</label>
+    <input type="text" class="form-control" id="nilai1" name="nilai1" value="<?php echo $row['nilaii']; ?>" onFocus="startCalc();" onBlur="stopCalc();" readonly>
+  </div>
+
   
 
 
@@ -135,7 +158,21 @@ $nip = $row['nip'];
 </form>
 
 
+<!-- <script src="jquery-1.12.4.min.js">
+  function autofill(){
+    var nis = $('#nis').val();
+    $.ajax({
+      url : 'autofill-ajax.php',
+      data : 'nis='+nis,
+    }).success(function(data){
+        var json = data,
+        obj = JSON.parse(json);
+        $("#nilai1").val(obj.nilai1);
 
+    });
+  }
+
+</script>   -->
 
 </body>
 </html>

@@ -9,6 +9,14 @@
 <div class="services-w3layouts" id="services">
     <div class="container"> 
 
+
+
+    <div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
+
+
 <div class="well well-sm">Nilai Absen / Tugas / UTS / UAS SEMESTER II</div>
    
    
@@ -81,6 +89,13 @@
 
             ?>
 </table>
+</div>
+</div><br><hr />
+
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
 
 
 <div class="well well-sm">Grafik Nilai Semester II</div>
@@ -159,12 +174,14 @@ $(document).ready(function() {
 </br></br></br></br>
 <!--- Bagian Judul--> 
 
- 
+ </div>
+ </div>
 
 
   
    
 
-
+</div>
+</div>
 </div>
 </div>

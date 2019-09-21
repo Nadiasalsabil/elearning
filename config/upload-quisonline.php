@@ -4,6 +4,8 @@
 
     include '../config/koneksi.php';
 
+  
+   $user = $_POST["username"];
    $kelas = $_POST["idkelas"];
    $mapel = $_POST["mp"];
    $soal = $_POST["soal"];
@@ -15,6 +17,7 @@
    $kj = $_POST['kj'];
    $tgl = $_POST['tgl1'];
     $aktif = $_POST['aktifsoal'];
+    $paket = $_POST['paket'];
 
 
 
@@ -58,7 +61,7 @@
         }
     }
 
- $input="INSERT INTO soal(id_soal,kelas,mapel,soal,a,b,c,d,e,kunci_jawaban,gambar,tanggal,aktif)values('','$kelas','$mapel','$soal','$a','$b','$c','$d','$e','$kj','$target_file','$tgl','$aktif')";
+ $input="INSERT INTO soal(id_soal,paket,nip,kelas,mapel,soal,a,b,c,d,e,kunci_jawaban,gambar,tanggal,aktif)values('','$paket','$user','$kelas','$mapel','$soal','$a','$b','$c','$d','$e','$kj','$target_file','$tgl','$aktif')";
     $updaterespon   = mysqli_query($konek, $input)or die(mysqli_error($konek));
 
     if ($updaterespon)

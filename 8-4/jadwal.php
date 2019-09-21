@@ -8,7 +8,14 @@
 <div class="services-w3layouts" id="services">
   <div class="container"> 
 
-<div class="well well-sm" style="background-color:yellow;" ><b>Jadwal Pelajaran Hari Senin</b></div>
+
+
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
+
+<div class="well well-sm" style="background-color:Light grey;" ><b>Jadwal Pelajaran Hari Senin</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -58,9 +65,16 @@
               
                 ?>
 </table>
+</div>
+</div><br><hr />
+
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
 
 
-<div class="well well-sm" style="background-color:yellow;"><b>Jadwal Pelajaran Hari Selasa</b></div>
+<div class="well well-sm" style="background-color:Light grey;"><b>Jadwal Pelajaran Hari Selasa</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -110,8 +124,16 @@
               
                 ?>
 </table>
+</div>
+</div><br><hr />
 
-<div class="well well-sm" style="background-color:yellow;" ><b>Jadwal Pelajaran Hari Rabu</b></div>
+
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
+
+<div class="well well-sm" style="background-color:Light grey;" ><b>Jadwal Pelajaran Hari Rabu</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -161,8 +183,15 @@
               
                 ?>
 </table>
+</div>
+</div><br><hr />
 
-<div class="well well-sm" style="background-color:yellow;" ><b>Jadwal Pelajaran Hari Kamis</b></div>
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
+
+<div class="well well-sm" style="background-color:Light grey;" ><b>Jadwal Pelajaran Hari Kamis</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -212,9 +241,16 @@
               
                 ?>
 </table>
+</div>
+</div><br><hr />
+
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
 
 
-<div class="well well-sm" style="background-color:yellow;" ><b>Jadwal Pelajaran Hari Jumat</b></div>
+<div class="well well-sm" style="background-color:Light grey;" ><b>Jadwal Pelajaran Hari Jumat</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -264,11 +300,17 @@
               
                 ?>
 </table>
+</div>
+</div><br><hr />
 
 
 
 
 
-
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 	</div>
 	</div>

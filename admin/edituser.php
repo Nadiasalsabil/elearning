@@ -20,7 +20,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Star Admin Free Bootstrap-4 Admin Dashboard Template</title>
+  <title>Admin | SMP N 34 Bekasi</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="node_modules/simple-line-icons/css/simple-line-icons.css">
@@ -39,7 +39,7 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
         <a class="navbar-brand brand-logo" href="index.html"><img src="images/logo.svg" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
        SMP NEGERI 34 BEKASI
@@ -56,7 +56,7 @@
         <ul class="nav">
           <li class="nav-item nav-profile">
             <div class="nav-link">
-              <div class="profile-image"> <img src="images/faces/me.jpg" alt="image"/> <span class="online-status online"></span> </div>
+              <div class="profile-image"> <img src="../images/2.png" alt="image"/> <span class="online-status online"></span> </div>
               <div class="profile-name">
                 <p class="name">Nadia Salsabil</p>
                 <p class="designation">Admin</p>
@@ -177,9 +177,9 @@
               <div class="card">
                 <div class="card-body">
                  
-                 <div class="alert alert-success">
- 				 <img src="images/faces-clipart/pic-3.png">&nbsp;&nbsp;<strong>Edit Data User</strong>&nbsp; SMP Negeri 34 Bekasi 
-				</div>
+                <div class="alert alert-success">
+  <img src="images/faces-clipart/pic-3.png">&nbsp;&nbsp;<strong>Edit Data User  </strong>&nbsp; SMP Negeri 34 Bekasi 
+</div>
 
 				<?php
 include '../config/koneksi.php';
@@ -191,24 +191,26 @@ $hasil=mysqli_query($konek,$edit)or die(mysqli_error($konek));
 $data=mysqli_fetch_array($hasil);
 ?>
 
-<form  class="forms-sample" action="../config/updateuser.php" method="post">
+<form action="../config/updateuser.php" method="post"  class="forms-sample" >
 	  <div class="form-group row">
-	  	 <input type="hidden" class="form-control" id="id" name="id" value=<?php echo $data['id']; ?>>
+    <input type="hidden" class="form-control" id="id" name="id" value=<?php echo $data['id']; ?>>
 	  	</div>
 
                         <div class="form-group row">
-                          <label for="exampleInputEmail2" class="col-sm-3 col-form-label">NIS / NIP</label>
+                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">NIS / NIP</label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" id="nis" name="nis" value=<?php echo $data['nis'];?>>
+                         
                           </div>
                         </div>
-                        <div class="form-group row">
-                          <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Username</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" id="user" name="user" value=<?php echo $data['username'];?>>
 
-                          </div>
+                        <div class="form-group row">
+                        <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Username</label>
+                          <div class="col-sm-9">
+                            <input type="text" class="form-control" id="user" name="user" value="<?php echo $data['username'];?>">
                         </div>
+                        </div>
+                       
 
                           <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Password</label>
@@ -224,37 +226,13 @@ $data=mysqli_fetch_array($hasil);
                           </div>
                         </div>
                          
-                          <div class="form-group row">
-                          <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Kelas</label>
+                        <div class="form-group row">
+                        <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Kelas</label>
                           <div class="col-sm-9">
                             <input type="text" class="form-control" id="kls" name="kls" value=<?php echo $data['id_kelas'];?>>
                           </div>
                         </div>
-
-                         <div class="form-group row">
-                          <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Batas Login</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" id="bl" name="bl" value=<?php echo $data['batas_login'];?>>
-                          </div>
-                        </div>
                          
-                            <div class="form-group row">
-                          <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Blokir</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" id="blok" name="blok" value=<?php echo $data['blokir'];?>>
-                          </div>
-                        </div>
-                         
-                          <div class="form-group row">
-                          <label for="exampleInputPassword2" class="col-sm-3 col-form-label">No</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" id="no" name="no" value=<?php echo $data['no'];?>>
-                          </div>
-                        </div>
-                         
-                         
-                         
-
                        
 
                         <button type="submit" class="btn btn-success mr-2">Update</button>
@@ -295,9 +273,10 @@ $data=mysqli_fetch_array($hasil);
 
               if ($halaman=='tambahjadwalsiswa')
               include 'tambahjadwalsiswa.php';
-               
-                 if ($halaman=='tambahjadwaltryout')
+
+              if ($halaman=='tambahjadwaltryout')
               include 'tambahjadwaltryout.php';
+               
 
          
 

@@ -45,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body>
 <!-- banner -->
-	<div class="banner" id="home">
+	
 		<!-- header -->
 		<header>
 			<div class="container">
@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<span class="icon-bar"></span>
 				  </button>				  
 				<div class="w3-logo">
-					<h3><a href="#">E-Learning </h3> <br>
+					<h3><a href="guru.php?halaman=awalguru">E-Learning </h3> <br>
 					<font size="4px">SMP Negeri 34 Bekasi</font></a>
 					
 				</div>
@@ -81,6 +81,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					  <ul class="dropdown-menu" style="background-color: white;">
 						<li><a href="guru.php?halaman=inputnilai"><b>Input Nilai</b></a></li>
 						<li><a href="guru.php?halaman=editnilai"><b>Edit Nilai </b></a></li>
+						<li><a href="guru.php?halaman=latihansoal"><b>Latihan Soal Online </b></a></li>
 						
 
 						</ul>
@@ -141,49 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</header>
 	<!-- //header -->
 	<!-- banner-text -->
-		<div class="banner-text"> 
-			<div class="callbacks_container">
-				<ul class="rslides" id="slider3">
-					<li>
-						<div class="slider-info">
-							<h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-						
-						</div>
-					</li>
-					<li>
-					
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Make the best choice for your education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>E-Learning SMP Negeri 34 Bekasi</h3>
-							<h4> Successful career starts with good education</h4>
-							
-						   
-						</div>
-					</li>
-					<li>
-						
-						<div class="slider-info">
-							 <h3>Preparing for successful future</h3>
-							<h4> Make the best choice for your education</h4>
-						   
-						</div>
-					</li>
-
-				</ul>
-				
-			</div>
-			<div class="clearfix"></div>	
-		</div>
-	</div>
+		
 <!-- //banner -->
 <!--services-section-->
 <div class="services-w3layouts" id="services">
@@ -215,6 +174,16 @@ include 'editnilai.php';
 
 if ($halaman=='tugas')
 include 'tugas.php';
+
+if ($halaman=='editsoal')
+include 'editsoal.php';
+
+if ($halaman=='awalguru')
+include 'awalguru.php';
+
+if ($halaman=='latihansoal')
+include 'latihansoal.php';
+
 
 ?>
 

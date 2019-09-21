@@ -3,7 +3,7 @@
             	<form class="forms-sample" form action="" method="POST">
                         <div class="form-group">
                          
-                          <input type="text" class="form-control" id="cari" name="cari" placeholder="Masukkan NIP Guru" style="width: 350px;">
+                          <input type="text" class="form-control" id="cari" name="cari" placeholder="Mencari Pencarian ........" style="width: 350px;">
                         </div>
 <button type="submit" class="btn btn-warning btn-xs">Cari Data</button>
 
@@ -36,7 +36,7 @@
 
              if(isset($_POST['cari'])){
              $cari = $_POST['cari'];
-             $query = mysqli_query($konek, "SELECT id_guru,nip,nama,jabatan,jk FROM guru where nip like '%".$cari."%'")or die(mysqli_error());     
+             $query = mysqli_query($konek, "SELECT id_guru,nip,nama,jabatan,jk FROM guru where nip like '%".$cari."%' OR nama like '%".$cari."%' OR jabatan like '%".$cari."%' OR jk like '%".$cari."%'")or die(mysqli_error());     
              }else{
 
 

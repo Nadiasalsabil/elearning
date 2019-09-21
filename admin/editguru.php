@@ -205,7 +205,7 @@ $data=mysqli_fetch_array($hasil);
                         <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Nama Lengkap</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="nama" name="nama" value=<?php echo $data['nama'];?>>
+                            <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama'];?>">
 
                           </div>
                         </div>
@@ -213,7 +213,7 @@ $data=mysqli_fetch_array($hasil);
                           <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Jabatan</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="jbt" name="jbt" value=<?php echo $data['jabatan'];?>>
+                            <input type="text" class="form-control" id="jbt" name="jbt" value="<?php echo $data['jabatan'];?>">
                           </div>
                         </div>
                          

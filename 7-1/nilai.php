@@ -9,6 +9,10 @@
 <div class="services-w3layouts" id="services">
     <div class="container"> 
 
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
 <div class="well well-sm">Nilai Absen / Tugas / UTS / UAS SEMESTER I</div>
    
    
@@ -53,7 +57,7 @@
 
                         if(mysqli_num_rows($query) == 0){   
                                     
-                        echo '<tr><td colspan="5" align="center">Tidak ada data!</td></tr>';  
+                        echo '<tr><td colspan="5" align="center">Belum ada data!</td></tr>';  
                         }
                           else
                         { 
@@ -81,7 +85,14 @@
 
             ?>
 </table>
+</div>
+</div><br> <hr />
 
+
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
 
 <div class="well well-sm">Grafik Nilai Semester I</div>
 
@@ -99,7 +110,7 @@ $(document).ready(function() {
             type: 'column'
          },   
          title: {
-            text: 'Grafik Nilai Semester '
+            text: 'Grafik Nilai Semester I '
          },
          xAxis: {
             categories: ['Mata Pelajaran']
@@ -155,7 +166,8 @@ $(document).ready(function() {
   
     <div id='container'></div>    
 
-
+</div>
+</div><br>
 </br></br></br></br>
 <!--- Bagian Judul--> 
 

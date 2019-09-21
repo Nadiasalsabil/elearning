@@ -1,14 +1,20 @@
 
-
-
-<center><h3>JADWAL PELAJARAN </h3></center><br>
+<center><h3>JADWAL PELAJARAN & JADWAL TRYOUT  </h3></center><br>
   <center><img src="../images/2.png" width="130px" height="130px"></center><br>
 <h4><b><center>  SMP NEGERI 34 BEKASI</h4></b></center>
 <center><font size="2px">Jl. Wibawa Mukti IV No.32, Jatimekar, Jatiasih, Kota Bekasi, Jawa Barat 17422 </font></center></b> <hr />
-<div class="services-w3layouts" id="services">
-  <div class="container"> 
 
-<div class="well well-sm" style="background-color:yellow;" ><b>Jadwal Pelajaran Hari Senin</b></div>
+
+
+ 
+<div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><b>Jadwal Tryout SMP Negeri 34 Bekasi</b></div>
+      <div class="panel-body">
+
+
+
+<div class="well well-sm" style="background-color:light grey;" ><b>Jadwal Pelajaran Hari Senin</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -60,7 +66,7 @@
 </table>
 
 
-<div class="well well-sm" style="background-color:yellow;"><b>Jadwal Pelajaran Hari Selasa</b></div>
+<div class="well well-sm" style="background-color:light grey;"><b>Jadwal Pelajaran Hari Selasa</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -111,7 +117,7 @@
                 ?>
 </table>
 
-<div class="well well-sm" style="background-color:yellow;" ><b>Jadwal Pelajaran Hari Rabu</b></div>
+<div class="well well-sm" style="background-color:light grey;" ><b>Jadwal Pelajaran Hari Rabu</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -162,7 +168,7 @@
                 ?>
 </table>
 
-<div class="well well-sm" style="background-color:yellow;" ><b>Jadwal Pelajaran Hari Kamis</b></div>
+<div class="well well-sm" style="background-color:light grey;" ><b>Jadwal Pelajaran Hari Kamis</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -214,7 +220,7 @@
 </table>
 
 
-<div class="well well-sm" style="background-color:yellow;" ><b>Jadwal Pelajaran Hari Jumat</b></div>
+<div class="well well-sm" style="background-color:light grey;" ><b>Jadwal Pelajaran Hari Jumat</b></div>
 
 <table class="table table-striped" style="background-color: #E6E6FA;">
     <thead>
@@ -266,9 +272,71 @@
 </table>
 
 
+</div>
+</div><br><br><hr />
+
+<div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><b>Jadwal Tryout SMP Negeri 34 Bekasi</b></div>
+      <div class="panel-body">
+
+      <div class="well well-sm" style="background-color:light grey;" ><b>Jadwal Tryout</b></div>
+
+<table class="table table-striped" style="background-color: #E6E6FA;">
+    <thead>
+      <tr>
+        <th style="background-color: #1ca0de;"><font color="white"><b><center>NO</center></b></font></th>
+        <th style="background-color: #1ca0de;"><font color="white"><b><center>Tanggal</center></b></font></th>
+        <th style="background-color: #1ca0de;"><font color="white"><b><center>Mata Pelajaran</center></b></font></th>
+         <th style="background-color: #1ca0de;"><font color="white"><b><center>Tryout Ke</center></b></font></th>
+        
+        
+      </tr>
+    </thead>
+    </tbody>
+  
 
 
+        <?php
 
+
+            include '../config/koneksi.php';
+
+            
+      
+
+            $query = mysqli_query($konek, "SELECT id,tanggal,mapel,tryoutke FROM jadwal_tryout")or die(mysqli_error());
+                    if(mysqli_num_rows($query) == 0){ 
+                      echo '<tr><td colspan="5" align="center">Tidak ada data!</td></tr>';  
+                    }
+                      else
+                    { 
+                      $no = 1;        
+                      while($data = mysqli_fetch_array($query)){  
+                        echo '<tr>';
+                        echo '<td><center>'.$no.'</center></td>';
+                        echo '<td> <center>'.$data['tanggal'].' <center></td>';
+                        echo '<td> <center>'.$data['mapel'].'<center></td>';
+                        echo '<td> <center>'.$data['tryoutke'].'<center></td>';
+                      
+                       
+                       
+                   
+                        echo '</tr>';
+                        $no++;  
+                      }
+                    }
+              
+                ?>
+</table>
+</div>
+</div><br><br>
+
+
+<div class="services-w3layouts" id="services">
+  <div class="container">
 
 	</div>
 	</div>
+</div>
+</div>

@@ -63,7 +63,7 @@ ol.commentlist {
 
 </style>
 
-
+<br><br><br>
 <center><font color="#1ca0de"> <h2>FORUM DISKUSI VII-I </h2></font></center>
 <center><i class="fa fa-user" style="font-size:70px"></i></center>
 <center><font color="#1ca0de"> <h2>SMP Negeri 34 Bekasi </h2></font></center>
@@ -157,43 +157,5 @@ $nis = $row['nis'];
 </form>
 </div>
 </div>
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 </div>

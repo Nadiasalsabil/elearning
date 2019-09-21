@@ -17,7 +17,7 @@
          <th style="background-color: #1ca0de;"><font color="white"><b><center>Bab</center></b></font></th>
          <th style="background-color: #1ca0de;"><font color="white"><b><center>Tanggal</center></b></font></th>
          <th style="background-color: #1ca0de;"><font color="white"><b><center>File</center></b></font></th>
-       
+        <th style="background-color: #1ca0de;"><font color="white"><b><center>Action</center></b></font></th>
         
       </tr>
     </thead>
@@ -47,7 +47,9 @@
                         echo '<td> <center>'.$data['judul'].'<center></td>';
                         echo '<td> <center>'.$data['bab'].'<center></td>';
                         echo '<td> <center>'.$data['tanggal'].' <center></td>';
-                        echo '<td> <center> <embed src="'.$data['file'].'" width="500" height="300"></embed><center></td>';
+                        echo '<td> <center> '.$data['file'].'<center></td>';
+                        echo '<td><a href="../config/simpan71.php?id='.$data['id'].'"><center>Download File</center></a></td>';
+                        
                         
                        
                        

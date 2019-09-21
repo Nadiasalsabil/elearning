@@ -10,7 +10,7 @@
                         <div class="form-group row">
                           <label for="exampleInputEmail2" class="col-sm-3 col-form-label">NIS / NIP</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="nis" name="nis" placeholder="Ex : 197102181998021005">
+                            <input type="number" class="form-control" id="nis" name="nis" placeholder="Ex : 197102181998021005">
                           </div>
                         </div>
                         <div class="form-group row">
@@ -24,7 +24,7 @@
                           <div class="form-group row">
                           <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Password</label>
                           <div class="col-sm-9">
-                            <input type="text" class="form-control" id="pwd" name="pwd" placeholder="gunakan tanggal Lahir Ex : 07061992">
+                            <input type="text" class="form-control" id="pwd" name="pwd" placeholder=" 07061992 atau Password">
                           </div>
                         </div>
                          
@@ -42,26 +42,7 @@
                           </div>
                         </div>
 
-                         <div class="form-group row">
-                          <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Batas Login</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" id="bl" name="bl" value="0" readonly>
-                          </div>
-                        </div>
-                         
-                            <div class="form-group row">
-                          <label for="exampleInputPassword2" class="col-sm-3 col-form-label">Blokir</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" id="blok" name="blok" value="N" readonly>
-                          </div>
-                        </div>
-                         
-                          <div class="form-group row">
-                          <label for="exampleInputPassword2" class="col-sm-3 col-form-label">No</label>
-                          <div class="col-sm-9">
-                            <input type="text" class="form-control" id="no" name="no" value="0" readonly>
-                          </div>
-                        </div>
+                        
                          
 
                        

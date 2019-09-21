@@ -5,8 +5,15 @@
     
           <center><font color="#1ca0de"> <h2>SMP Negeri 34 Bekasi </h2></font></center>
           <center><font color="black">Jl. Wibawa Mukti IV No.32, Jatimekar, Jatiasih, Kota Bks, Jawa Barat 17422</font></center><br>
+<hr /><br>
 
 <div class="well well-sm">Upload  Tugas</div>
+<div class="panel-group">
+    <div class="panel panel-info">
+     
+      <div class="panel-body">
+
+
   <form action="../config/upload.php" method="POST" enctype="multipart/form-data">
 
 
@@ -68,7 +75,7 @@ $nis = $row['nis'];
 
  <div class="form-group">
     <label for="email">Tanggal:</label>
-    <input type="date" class="form-control" id="tgl1" name="tgl1" >
+    <input type="text" class="form-control" id="tgl1" name="tgl1" value=<?php echo date('d-m-y') ?> readonly >
   </div>
 
 <div class="form-group">
@@ -79,9 +86,12 @@ $nis = $row['nis'];
 
 
 
-  <button type="submit" class="btn btn-primary">Upload</button>
+  <button type="submit" class="btn btn-primary"><b>Upload</b></button>
 </form>
+</div>
+</div>
 
+</div>
 
 </div>
 </div>

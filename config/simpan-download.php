@@ -1,6 +1,8 @@
 <?php
-$direktori = "tugas/";
-$filename = $_GET['id'];
+include '../config/koneksi.php';
+$query = mysqli_query($konek, 'select * from tugas where id = ' . $_GET['id']);
+$row = mysqli_fetch_assoc($query);
+$filename = realpath($row['file']);
 if(file_exists($direktori.$filename)){
       $file_extension = strtolower(pathinfo($filename, PATHINFO_EXTENSION));
       switch($file_extension){

@@ -8,7 +8,7 @@ if($_FILES["filename"]["size"] > 0)
 
 	while (($getdata = fgetcsv($file, 10000, ",")) !== FALSE)
 	{
-		$sql = "INSERT INTO soal(kelas,mapel,soal,a,b,c,d,e,kunci_jawaban,gambar,tanggal,aktif) VALUES ('$getdata[1]','$getdata[2]','$getdata[3]','$getdata[4]','$getdata[5]','$getdata[6]','$getdata[7]','$getdata[8]','$getdata[9]','$getdata[10]','$getdata[11]','$getdata[12]') ";
+		$sql = "INSERT INTO soal(id_soal,nip,kelas,mapel,soal,a,b,c,d,e,kunci_jawaban,gambar,tanggal,aktif) VALUES ('$getdata[0]','$getdata[1]','$getdata[2]','$getdata[3]','$getdata[4]','$getdata[5]','$getdata[6]','$getdata[7]','$getdata[8]','$getdata[9]','$getdata[10]','$getdata[11]','$getdata[12]','$getdata[13]' )";
 
 		$result = mysqli_query($konek,$sql);
 		if(!isset($result))

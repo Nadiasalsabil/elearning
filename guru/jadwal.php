@@ -1,7 +1,7 @@
 <?php
     error_reporting(0);    
 ?>
-
+<br><br>
 <center><h3>JADWAL MENGAJAR </h3></center><br>
   <center><img src="../images/2.png" width="130px" height="130px"></center><br>
 <h4><b><center> SMP NEGERI 34 BEKASI</h4></b></center>
@@ -9,6 +9,11 @@
 
 <div class="services-w3layouts" id="services">
 	<div class="container">	
+
+    <div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><b>Jadwal Kegiatan Belajar Mengajar</b></div>
+      <div class="panel-body">
 
 <div class="well well-sm"><b>Jadwal Kegiatan Belajar Mengajar Hari Senin</b></div>
 
@@ -79,6 +84,16 @@
             ?>
 </table>
 
+</div>
+</div>
+</div><br><br>
+
+
+
+<div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><b>Jadwal Kegiatan Belajar Mengajar</b></div>
+      <div class="panel-body">
 <div class="well well-sm"><b>Jadwal Kegiatan Belajar Mengajar Hari Selasa</b></div>
 
    
@@ -147,6 +162,14 @@
 
             ?>
 </table>
+</div>
+</div>
+</div><br><br>
+
+<div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><b>Jadwal Kegiatan Belajar Mengajar</b></div>
+      <div class="panel-body">
 
 <div class="well well-sm"><b>Jadwal Kegiatan Belajar Mengajar Hari Rabu</b></div>
 
@@ -216,6 +239,16 @@
 
             ?>
 </table>
+
+</div>
+</div>
+</div><br><br>
+
+
+<div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><b>Jadwal Kegiatan Belajar Mengajar</b></div>
+      <div class="panel-body">
 <div class="well well-sm"><b>Jadwal Kegiatan Belajar Mengajar Hari Kamis</b></div>
 
    
@@ -284,6 +317,14 @@
 
             ?>
 </table>
+</div>
+</div>
+</div><br><br>
+
+<div class="panel-group">
+    <div class="panel panel-info">
+      <div class="panel-heading"><b>Jadwal Kegiatan Belajar Mengajar</b></div>
+      <div class="panel-body">
 
 <div class="well well-sm"><b>Jadwal Kegiatan Belajar Mengajar Hari Jumat</b></div>
 
@@ -353,7 +394,9 @@
 
             ?>
 </table>
-
+</div>
+</div>
+</div><br><br>
 
 </div>
 </div>

@@ -40,7 +40,7 @@
                 }else{
 
 
-                $query  = mysqli_query($konek, "SELECT id_siswa,nis,nama,id_kelas,jk FROM  siswa ")or die(mysqli_error($konek));
+                $query  = mysqli_query($konek, "SELECT id_siswa,nis,nama,id_kelas,jk FROM  siswa order by id_kelas ")or die(mysqli_error($konek));
               }
 
                       $no = 1;        

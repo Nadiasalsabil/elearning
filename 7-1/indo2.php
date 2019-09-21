@@ -1,7 +1,7 @@
 <script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script>
  
   <!-- Script Timer -->
-     <script type="text/javascript">
+       <script type="text/javascript">
         $(document).ready(function(e) {
               /** Membuat Waktu Mulai Hitung Mundur Dengan 
                 * var detik = 0,
@@ -110,7 +110,7 @@
 			$pilihan_e=$row["e"];  
 			
 			?>
-			<form name="form1" method="post" action="jawab1.php">
+			<form name="form1" method="post" action="jawab1.php?id_tq=<?php echo $_GET['id_tq']; ?>">
 			<input type="hidden" name="id[]" value=<?php echo $id; ?>>
 			<input type="hidden" name="jumlah" value=<?php echo $jumlah; ?>>
 			<tr>
